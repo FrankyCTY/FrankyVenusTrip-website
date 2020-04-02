@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Montserrat:wght@200;300&family=Quicksand:wght@300;400;500&display=swap");
+:root {
+  font-size: 10px; }
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: white;
+  font-family: 'Quicksand', sans-serif; }
+
+nav {
+  background: #f3c83e;
+  min-height: 4rem;
+  position: fixed;
+  width: 100vw; }
+  nav .nav__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+    color: #87b6d9; }
+  nav .toggle-box {
+    display: none; }
+    nav .toggle-box:checked ~ .nav__items {
+      transform: scaleY(1); }
+    nav .toggle-box:checked ~ .nav__items > .nav__item {
+      opacity: 1;
+      transition: opacity .3s ease .1s; }
+  nav .toggle-btn {
+    position: absolute;
+    width: 1.5rem;
+    height: 2rem;
+    top: 1.5rem;
+    left: 2rem;
+    height: 1.4rem;
+    cursor: pointer; }
+    nav .toggle-btn span {
+      width: 1.5rem;
+      height: 2px;
+      background: white;
+      border-radius: 2px;
+      position: relative;
+      display: block; }
+    nav .toggle-btn span::after,
+    nav .toggle-btn span::before {
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: 100%;
+      background: white;
+      border-radius: 2px; }
+    nav .toggle-btn span::after {
+      top: .5rem;
+      height: 2.5px; }
+    nav .toggle-btn span::before {
+      top: 1rem; }
+  nav .nav__items {
+    position: absolute;
+    bottom: -7.5rem;
+    padding: 1rem 2rem;
+    list-style: none;
+    background: #f3c83e;
+    width: 100vw;
+    transform: scaleY(0);
+    transition: all .3s ease;
+    transform-origin: top; }
+    nav .nav__items .nav__item:not(:first-child) {
+      margin-top: 1rem; }
+    nav .nav__items .nav__item {
+      opacity: 0;
+      transition: opacity .3s ease; }
+      nav .nav__items .nav__item:hover {
+        color: #323232;
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.8); }
+    nav .nav__items .nav__link {
+      text-decoration: none;
+      color: #323232; }
+  nav .search-box {
+    display: none; }
+  @media only screen and (min-width: 800px) {
+    nav {
+      padding: 0 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center; }
+      nav .toggle-btn {
+        display: none; }
+      nav .nav__title {
+        all: unset;
+        font-family: 'Lato', sans-serif;
+        font-size: 3rem;
+        color: #87b6d9; }
+      nav .nav__items {
+        all: unset;
+        list-style: none; }
+        nav .nav__items .nav__item {
+          all: unset;
+          padding: 0 2rem; }
+        nav .nav__items .nav__link {
+          text-decoration: none;
+          color: #323232; }
+      nav .search-box {
+        all: unset;
+        position: relative; }
+        nav .search-box .search__input {
+          all: unset;
+          border: 1px solid;
+          padding: 0 .2rem; }
+        nav .search-box .search__icon {
+          position: absolute;
+          right: .2rem;
+          top: .3rem;
+          font-size: .8rem; } }
+
+main {
+  display: grid;
+  padding: 4rem 5rem;
+  grid-template-columns: 2rem 1fr 1fr 2rem;
+  grid-template-rows: [page-start] 6rem [canvas-start] 55vh [attribute-start] 0.5rem [canvas-end] 1.5rem [attribute-end] auto [bottom]; }
+
+.article-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+  grid-column: 1 / 5; }
+
+.article-content {
+  grid-column: 1 / 5;
+  background: pink;
+  grid-row: 2 / span 2; }
+  .article-content .content__img {
+    width: 100%;
+    height: 100%; }
+
+.content-attribute {
+  grid-column: 2 / 4;
+  grid-row: 3 / 5; }
+  .content-attribute .image-box {
+    position: relative; }
+    .content-attribute .image-box .author-pic {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%; }
+    .content-attribute .image-box span {
+      font-size: 0.8rem;
+      position: absolute;
+      top: 1rem;
+      right: 0;
+      color: #00a8cc; }
+
+.article-footer {
+  grid-column: 1 / 5;
+  margin-top: 3.5rem;
+  padding: 0 15rem 0 5rem;
+  position: relative; }
+  .article-footer .comment-icon {
+    position: absolute;
+    left: 2.5rem;
+    top: -1rem; }

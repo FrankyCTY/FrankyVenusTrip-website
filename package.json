@@ -1,0 +1,15 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "myJs.js",
+  "scripts": {
+    "watch:scss": "node-sass ./home.scss ./main.css -w"
+  },
+  "author": "Franky Venusd",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "sass": "^1.26.3"
+  }
+}

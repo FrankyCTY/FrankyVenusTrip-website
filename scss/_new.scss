@@ -1,0 +1,321 @@
+//========== Default Settings ==========
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Montserrat:wght@200;300&family=Quicksand:wght@300;400;500&display=swap');
+@import "./typography";
+@import "./variable";
+// font-family: 'Lato', sans-serif;
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Quicksand', sans-serif;
+
+:root {
+    font-size: 10px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+//========= Start =========
+
+body {
+    background: $bg-main;
+    font-family: 'Quicksand', sans-serif;
+}
+
+//========= navigation bar =========
+
+nav {
+    background: $nav-main;
+
+    min-height: 4rem;
+
+    position: fixed;
+    width: 100vw;
+
+    .nav__title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        font-family: 'Lato', sans-serif;
+
+        font-size: 3rem;
+
+        color: $ft-title-venus;
+    }
+
+    .toggle-box {
+        display: none;
+
+        &:checked ~ .nav__items {
+            transform: scaleY(1);
+        }
+
+        &:checked ~ .nav__items > .nav__item {
+            opacity: 1;
+            transition: opacity .3s ease .1s;
+        }
+    }
+
+    .toggle-btn {
+
+        position: absolute;
+        width: 1.5rem;
+        height: 2rem;
+        // background: black;
+
+        top: 1.5rem;
+        left: 2rem;
+
+        height: 1.4rem;
+
+
+        cursor: pointer;
+
+        
+
+
+        span
+        {
+            width: 1.5rem;
+            height: 2px;
+            background: white;
+    
+            border-radius: 2px;
+                
+            position: relative;
+            display: block;            
+        }
+        
+        span::after,
+        span::before {
+            position: absolute;
+            content: '';
+            height: 100%;
+            width: 100%;
+            background: white;
+            border-radius: 2px;
+        }
+
+        span::after {
+            top: .5rem;
+
+            height: 2.5px;
+        }
+
+        span::before {
+            top: 1rem;
+        }
+    }
+
+    .nav__items {
+        position: absolute;
+
+        bottom: -7.5rem;
+
+        padding: 1rem 2rem;
+        list-style: none;
+
+        background: $nav-main;
+
+
+        width: 100vw;
+
+        transform: scaleY(0);
+
+        transition: all .3s ease; 
+
+        transform-origin: top;
+
+        .nav__item:not(:first-child) {
+            margin-top: 1rem;
+        }
+
+        .nav__item {
+            opacity: 0;
+
+            transition: opacity .3s ease;
+
+            &:hover {
+                color: $nav-btn-hover;
+                text-shadow: 0 0 3px rgba($color: #000000, $alpha: .8);
+            }
+        }
+
+        .nav__link {
+            text-decoration: none;
+
+            color: $nav-btn;
+        }
+    }
+
+    .search-box {
+        display: none;
+    }
+
+
+    @media only screen and (min-width: 800px) {
+
+        & {
+            padding: 0 2rem;
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: space-between;
+            align-items: center;
+
+            .toggle-btn {
+                display: none;
+            }
+    
+            .nav__title {
+                all: unset;
+        
+                font-family: 'Lato', sans-serif;
+        
+                font-size: 3rem;
+        
+                color: $ft-title-venus;
+            }
+
+            .nav__items {
+                all: unset;
+                list-style: none;
+        
+                .nav__item {
+                    all: unset;
+                    
+                    padding: 0 2rem;
+                }
+        
+                .nav__link {
+                    text-decoration: none;
+        
+                    color: $nav-btn;
+                }
+            }
+
+            .search-box {
+                all: unset;
+
+                position: relative;
+
+                .search__input {
+                    all: unset;
+                    border: 1px solid;
+                    padding: 0 .2rem;
+                }
+
+                .search__icon {
+                    position: absolute;
+                    right: .2rem;
+                    top: .3rem;
+
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}
+
+
+//===================================
+//          Main Section
+//===================================
+
+main {
+    display: grid;
+
+    padding: 4rem 5rem;
+
+    grid-template-columns: 2rem 1fr 1fr 2rem;
+    grid-template-rows: [page-start] 6rem [canvas-start] 55vh [attribute-start] .5rem [canvas-end]
+    1.5rem [attribute-end]  auto [bottom];
+}
+
+//========= Atricle header =========
+.article-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Lato', sans-serif;
+
+    grid-column: 1 / 5;
+}
+
+//========= Article content =========
+
+.article-content {
+    grid-column: 1 / 5;
+    background: pink;
+    // background-image: url(./DSCF2770.JPG);
+
+    grid-row: 2 / span 2;
+
+    .content__img {
+        width: 100%;
+        height: 100%;
+        
+    }
+
+}
+
+
+//========= Article Attribute =========
+
+.content-attribute {
+    grid-column: 2 / 4;
+    grid-row: 3 / 5;
+
+    .image-box {
+        position: relative;
+
+        .author-pic {
+            width: 2.5rem;
+            height: 2.5rem;
+    
+            border-radius: 50%;
+        }
+
+        span {
+            font-size: $fs-user-desc;
+
+            position: absolute;
+            top: 1rem;
+            right: 0;
+
+            color: $user-desc;
+        }
+    }
+
+}
+
+//========= Article footer =========
+
+.article-footer {
+    grid-column: 1 / 5;
+
+    margin-top: 3.5rem;
+    padding: 0 15rem 0 5rem;
+
+    position: relative;
+
+    .comment-icon {
+        position: absolute;
+        left: 2.5rem;
+        top: -1rem;
+    }
+}
