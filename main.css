@@ -20,7 +20,7 @@ body {
   font-family: 'Quicksand', sans-serif; }
 
 nav {
-  background: rgba(243, 200, 62, 0.9);
+  background: #f3c83e;
   height: 4rem;
   position: fixed;
   width: 100vw; }
@@ -71,7 +71,7 @@ nav {
     top: 4rem;
     padding: 1rem 2rem;
     list-style: none;
-    background: rgba(243, 200, 62, 0.9);
+    background: #f3c83e;
     width: 100%;
     transform: scaleY(0);
     transition: all .3s ease;
