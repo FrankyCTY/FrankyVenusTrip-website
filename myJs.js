@@ -29,7 +29,7 @@ readMoreBtn.onclick = () => {
 
 //UI shows up when compass is clicked;
 compass.onclick = () => {
-        ui.style.display = 'block';
+    ui.style.display = 'block';
 }
 
 back.onclick = () => {
