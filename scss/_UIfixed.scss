@@ -3,6 +3,7 @@
 @import "./variable";
 @import "./btn";
 
+//==== Btn to open naviation menu ====
 #fixed__nav-btn {
     all: unset;
     position: fixed;
@@ -36,11 +37,96 @@
 
     opacity: 1;
 
+    //==== Search Box ====
+    .search-bar {
+        --size: 3rem;
+        height: var(--size);
+        width: var(--size);
+
+        padding: 3px;
+
+        position: absolute;
+        top: 5rem;
+        right: 2rem;
+
+        border: 2px solid $search-bar;
+
+        display: flex;
+
+        border-radius: 100vh;
+
+        transition: width 300ms ease-in-out;
+
+        overflow: hidden;
+
+        &:focus-within {
+            width: 20rem;
+
+            .search-bar__input {
+                opacity: 1;
+                cursor: initial;
+            }
+
+            .search-bar__submit {
+                background: $search-icon;
+            }
+        }
+
+        .search-bar__input {
+            font-size: $fs-ui-search;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+
+            padding: 0 2em;
+            border: none;
+
+            line-height: calc(var(--size) - .7rem);
+
+            background: transparent;
+
+            opacity: 0;
+
+            cursor: pointer;
+
+            &:focus {
+                outline: none;
+            }
+
+            &::placeholder {
+                color: $ui-btn-color;
+            }
+        }
+
+        .search-bar__submit {
+            font-size: $fs-ui-search;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            border-radius: 100vh;
+
+            // background: pink;
+
+            width: calc(var(--size) - 10px);
+            height: calc(var(--size) - 10px);
+
+            margin-right: auto;
+
+            transition: background 150ms ease-in-out;
+
+            color: $search-icon;
+        }
+    }
+
+
+
+    //==== Undo Btn ====
     #menu__undo {
         all: unset;
         position: absolute;
-        right: 1.5rem;
-        top: 5rem;
+        bottom: 1rem;
+        left: 1rem;
     
         font-size: 2.5rem;
 
@@ -53,6 +139,7 @@
     
 }
 
+//==== List Items ====
 .data {
     position: relative;
     top: 50%;
@@ -82,7 +169,8 @@
 
                 position: relative;
 
-                &:hover {
+                &:hover,
+                &:focus {
                     background-color: $ui-li-hover;
                     background-color: $ui-li-hover;
                     color: $ui-menu-main;
@@ -111,6 +199,10 @@
     }
 }
 
+
+//=====================
+//     Media Query
+//=====================
 @media only screen and (min-width: 800px) {
     #fixed__nav-btn,
     .menu {

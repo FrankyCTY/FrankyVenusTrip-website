@@ -24,11 +24,57 @@
   display: fixed;
   transition: opacity .4s ease-out;
   opacity: 1; }
+  .menu .search-bar {
+    --size: 3rem;
+    height: var(--size);
+    width: var(--size);
+    padding: 3px;
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+    border: 2px solid #fff;
+    display: flex;
+    border-radius: 100vh;
+    transition: width 300ms ease-in-out;
+    overflow: hidden; }
+    .menu .search-bar:focus-within {
+      width: 20rem; }
+      .menu .search-bar:focus-within .search-bar__input {
+        opacity: 1;
+        cursor: initial; }
+      .menu .search-bar:focus-within .search-bar__submit {
+        background: #fff; }
+    .menu .search-bar .search-bar__input {
+      font-size: 1.5rem;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      padding: 0 2em;
+      border: none;
+      line-height: calc(var(--size) - .7rem);
+      background: transparent;
+      opacity: 0;
+      cursor: pointer; }
+      .menu .search-bar .search-bar__input:focus {
+        outline: none; }
+      .menu .search-bar .search-bar__input::placeholder {
+        color: #fff; }
+    .menu .search-bar .search-bar__submit {
+      font-size: 1.5rem;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      border-radius: 100vh;
+      width: calc(var(--size) - 10px);
+      height: calc(var(--size) - 10px);
+      margin-right: auto;
+      transition: background 150ms ease-in-out;
+      color: #fff; }
   .menu #menu__undo {
     all: unset;
     position: absolute;
-    right: 1.5rem;
-    top: 5rem;
+    bottom: 1rem;
+    left: 1rem;
     font-size: 2.5rem;
     color: white;
     cursor: pointer;
@@ -52,7 +98,7 @@
         text-decoration: none;
         color: #fff;
         position: relative; }
-        .data ul li a:hover {
+        .data ul li a:hover, .data ul li a:focus {
           background-color: #fff;
           background-color: #fff;
           color: #00a8cc; }
@@ -317,11 +363,57 @@ main {
   display: fixed;
   transition: opacity .4s ease-out;
   opacity: 1; }
+  .menu .search-bar {
+    --size: 3rem;
+    height: var(--size);
+    width: var(--size);
+    padding: 3px;
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+    border: 2px solid #fff;
+    display: flex;
+    border-radius: 100vh;
+    transition: width 300ms ease-in-out;
+    overflow: hidden; }
+    .menu .search-bar:focus-within {
+      width: 20rem; }
+      .menu .search-bar:focus-within .search-bar__input {
+        opacity: 1;
+        cursor: initial; }
+      .menu .search-bar:focus-within .search-bar__submit {
+        background: #fff; }
+    .menu .search-bar .search-bar__input {
+      font-size: 1.5rem;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      padding: 0 2em;
+      border: none;
+      line-height: calc(var(--size) - .7rem);
+      background: transparent;
+      opacity: 0;
+      cursor: pointer; }
+      .menu .search-bar .search-bar__input:focus {
+        outline: none; }
+      .menu .search-bar .search-bar__input::placeholder {
+        color: #fff; }
+    .menu .search-bar .search-bar__submit {
+      font-size: 1.5rem;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      border-radius: 100vh;
+      width: calc(var(--size) - 10px);
+      height: calc(var(--size) - 10px);
+      margin-right: auto;
+      transition: background 150ms ease-in-out;
+      color: #fff; }
   .menu #menu__undo {
     all: unset;
     position: absolute;
-    right: 1.5rem;
-    top: 5rem;
+    bottom: 1rem;
+    left: 1rem;
     font-size: 2.5rem;
     color: white;
     cursor: pointer;
@@ -345,7 +437,7 @@ main {
         text-decoration: none;
         color: #fff;
         position: relative; }
-        .data ul li a:hover {
+        .data ul li a:hover, .data ul li a:focus {
           background-color: #fff;
           background-color: #fff;
           color: #00a8cc; }
