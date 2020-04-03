@@ -150,7 +150,6 @@ main {
 
 .article-content {
   grid-column: 1 / 5;
-  background: pink;
   grid-row: 2 / span 2; }
   .article-content .content__img {
     width: 100%;
