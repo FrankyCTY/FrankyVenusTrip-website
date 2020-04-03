@@ -14,6 +14,8 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+    user-select: none;
 }
 
 *,
@@ -109,8 +111,6 @@ nav {
 
         span::after {
             top: .5rem;
-
-            height: 2.5px;
         }
 
         span::before {
@@ -129,7 +129,7 @@ nav {
         background: $nav-main;
 
 
-        width: 100vw;
+        width: 100%;
 
         transform: scaleY(0);
 
@@ -167,7 +167,9 @@ nav {
     @media only screen and (min-width: 800px) {
 
         & {
-            padding: 0 2rem;
+            padding: 0 3rem;
+
+            min-height: 6rem;
 
             display: flex;
 
@@ -193,7 +195,9 @@ nav {
             .nav__items {
                 all: unset;
                 list-style: none;
-        
+                
+                font-size: 1.8rem;
+
                 .nav__item {
                     all: unset;
                     
@@ -216,6 +220,8 @@ nav {
                     all: unset;
                     border: 1px solid;
                     padding: 0 .2rem;
+
+                    font-size: 1.5rem;
                 }
 
                 .search__icon {
@@ -223,7 +229,7 @@ nav {
                     right: .2rem;
                     top: .3rem;
 
-                    font-size: .8rem;
+                    font-size: 1.5rem;
                 }
             }
         }
@@ -243,6 +249,12 @@ main {
     grid-template-columns: 2rem 1fr 1fr 2rem;
     grid-template-rows: [page-start] 6rem [canvas-start] 55vh [attribute-start] .5rem [canvas-end]
     1.5rem [attribute-end]  auto [bottom];
+
+    @media only screen and (min-width: 800px) {
+        grid-template-rows: [page-start] 6rem [canvas-start] 55vh [attribute-start] .8rem [canvas-end]
+        2rem [attribute-end]  auto [bottom];
+        padding: 8rem 8rem;
+    }
 }
 
 //========= Atricle header =========
@@ -254,6 +266,10 @@ main {
     font-family: 'Lato', sans-serif;
 
     grid-column: 1 / 5;
+
+    @media only screen and (min-width: 800px) {
+        font-size: 1.8rem;
+    }
 }
 
 //========= Article content =========
@@ -270,7 +286,6 @@ main {
         height: 100%;
         
     }
-
 }
 
 
@@ -284,8 +299,7 @@ main {
         position: relative;
 
         .author-pic {
-            width: 2.5rem;
-            height: 2.5rem;
+            @include article_user-logo;
     
             border-radius: 50%;
         }
@@ -301,6 +315,20 @@ main {
         }
     }
 
+    @media only screen and (min-width: 800px) {
+        .image-box {
+
+            .author-pic {
+                @include article_user-logo(4rem, 4rem);
+            }
+
+            span {
+                font-size: $bfs-user-desc;
+            }
+        }
+    }
+
+
 }
 
 //========= Article footer =========
@@ -309,13 +337,36 @@ main {
     grid-column: 1 / 5;
 
     margin-top: 3.5rem;
-    padding: 0 15rem 0 5rem;
+    // padding: 0 15rem 0 5rem;
 
     position: relative;
 
+    text-align: justify;
+    text-justify: inter-character;
+
+    
     .comment-icon {
         position: absolute;
-        left: 2.5rem;
-        top: -1rem;
+        left: 0;
+        top: -1.6rem;
+    }
+
+    .footer-content {
+        @include typo_paragraph(1.2rem, $line-height: 1.8rem, $letter-spacing: 0);
+    }
+
+    @media only screen and (min-width: 800px) {
+        margin-top: 6rem;
+
+        padding: 0 45rem 0 8rem;
+
+        .comment-icon {
+            font-size: 2rem;
+            left: 3rem;
+        }
+
+        .footer-content {
+            @include typo_paragraph;
+        }
     }
 }

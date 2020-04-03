@@ -17,7 +17,7 @@ $blue: #00a8cc;
 
 //---- Major Variables ----
 $bg-main: white;
-$nav-main: $yellow;
+$nav-main: rgba($yellow, .9);
 
 $ft-title-venus: $blue-light;
 $ft-title-franky: $blue-light;
@@ -34,3 +34,5 @@ $user-desc: $blue;
 $nav-btn-size: 2rem;
 
 $fs-user-desc: .8rem;
+$bfs-user-desc: 1.5rem;
+ 
