@@ -44,15 +44,12 @@ nav {
     position: fixed;
     width: 100vw;
 
-    .nav__title {
+    .nav__icon {
+        width: 3.5rem;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-
-        font-family: 'Lato', sans-serif;
-
-        font-size: 3rem;
+        transform: translate(-50%, -55%);
 
         color: $ft-title-venus;
     }
@@ -182,15 +179,15 @@ nav {
             .toggle-btn {
                 display: none;
             }
-    
-            .nav__title {
+
+            .nav__icon {
                 all: unset;
-        
-                font-family: 'Lato', sans-serif;
-        
-                font-size: 3rem;
+                width: 5rem;
+                
         
                 color: $ft-title-venus;
+
+                transform: translateY(-10%);
             }
 
             .nav__items {
@@ -198,6 +195,8 @@ nav {
                 list-style: none;
                 
                 font-size: 1.8rem;
+
+                transform: translateX(25%);
 
                 .nav__item {
                     all: unset;
@@ -309,7 +308,7 @@ main {
             font-size: $fs-user-desc;
 
             position: absolute;
-            top: 1rem;
+            top: 1.3rem;
             right: 0;
 
             color: $user-desc;
@@ -381,6 +380,10 @@ main {
 
         .footer-content {
             @include typo_paragraph;
+        }
+
+        .read-more {
+            font-size: $bfs-btn;
         }
     }
 }
