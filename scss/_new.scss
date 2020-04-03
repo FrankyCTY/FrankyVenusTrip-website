@@ -288,11 +288,12 @@ main {
 
     grid-row: 2 / span 2;
 
-    .content__img {
-        width: 100%;
-        height: 100%;
-        
-    }
+    background-image: url(../DSCF2770.JPG);
+
+    background-size: cover;
+
+    background-position: bottom;
+
 }
 
 
