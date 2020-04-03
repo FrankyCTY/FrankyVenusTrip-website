@@ -38,7 +38,7 @@ body {
 nav {
     background: $nav-main;
 
-    min-height: 4rem;
+    height: 4rem;
 
     position: fixed;
     width: 100vw;
@@ -121,7 +121,7 @@ nav {
     .nav__items {
         position: absolute;
 
-        bottom: -7.5rem;
+        top: 4rem;
 
         padding: 1rem 2rem;
         list-style: none;
@@ -169,7 +169,7 @@ nav {
         & {
             padding: 0 3rem;
 
-            min-height: 6rem;
+            height: 6rem;
 
             display: flex;
 
