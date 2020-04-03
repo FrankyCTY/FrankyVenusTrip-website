@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Montserrat:wght@200;300&family=Quicksand:wght@300;400;500&display=swap');
+@import "./typography";
+@import "./variable";
+@import "./btn";
+
+#fixed__nav-btn {
+    all: unset;
+    position: fixed;
+    right: 1.5rem;
+    top: 5rem;
+
+    font-size: 2.5rem;
+
+    cursor: pointer;
+
+    z-index: 1;
+}
+
+.menu {
+    z-index: 0;
+    position: absolute;
+    background: $ui-menu-main;
+    height: 100vh;
+    width: 100%;
+    // top: -100%;
+
+    z-index: 2;
+
+    display: block;
+
+    #menu__undo {
+        all: unset;
+        position: fixed;
+        right: 1.5rem;
+        top: 5rem;
+    
+        font-size: 2.5rem;
+
+        color: white;
+    
+        cursor: pointer;
+    
+        z-index: 1;
+    }
+    
+}
+
+.data {
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    ul {
+        list-style: none;
+        // background: pink;
+    
+        font-size: $ui-btn-size;
+        
+    
+        li {
+            text-align: center;
+            // background: pink;
+
+            a {
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                padding: 4rem 0;
+
+                text-decoration: none;
+                color: $ui-btn-color;
+
+                position: relative;
+
+                &:hover {
+                    background-color: $ui-li-hover;
+                    background-color: $ui-li-hover;
+                    color: $ui-menu-main;
+                }
+                    
+                &:first-child::before {
+                    content: '';
+                    position: absolute;
+                    border-bottom: 2px solid white;
+                    left: 0;
+                    top: 0;
+                    
+                    width: 100vw;
+                }
+                    
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100vw;
+                    border-bottom: 2px solid white;
+                    left: 0;
+                    bottom: 0;
+                }  
+            }
+        }
+    }
+}

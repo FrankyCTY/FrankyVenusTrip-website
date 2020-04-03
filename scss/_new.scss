@@ -3,6 +3,7 @@
 @import "./typography";
 @import "./variable";
 @import "./btn";
+@import "./UIfixed";
 // font-family: 'Lato', sans-serif;
 // font-family: 'Montserrat', sans-serif;
 // font-family: 'Quicksand', sans-serif;
@@ -36,13 +37,17 @@ body {
 
 //========= navigation bar =========
 
+
+
 nav {
     background: $nav-main;
 
     height: 4rem;
 
-    position: fixed;
+    position: relative;
     width: 100vw;
+
+    z-index: 1;
 
     .nav__icon {
         width: 3.5rem;
@@ -165,6 +170,7 @@ nav {
     @media only screen and (min-width: 800px) {
 
         & {
+            position: fixed;
             padding: 0 3rem;
 
             height: 6rem;
@@ -244,7 +250,7 @@ nav {
 main {
     display: grid;
 
-    padding: 4rem 5rem;
+    padding: 1rem 5rem;
 
     grid-template-columns: 2rem 1fr 1fr 2rem;
     grid-template-rows: [page-start] 6rem [canvas-start] 55vh [attribute-start] .5rem [canvas-end]
@@ -266,6 +272,7 @@ main {
     font-family: 'Lato', sans-serif;
 
     grid-column: 1 / 5;
+
 
     @media only screen and (min-width: 800px) {
         font-size: 1.8rem;
@@ -292,7 +299,7 @@ main {
 //========= Article Attribute =========
 
 .content-attribute {
-    grid-column: 2 / 4;
+    grid-column: 2 / 5;
     grid-row: 3 / 5;
 
     .image-box {
@@ -308,7 +315,7 @@ main {
             font-size: $fs-user-desc;
 
             position: absolute;
-            top: 1.3rem;
+            top: .8rem;
             right: 0;
 
             color: $user-desc;
@@ -316,16 +323,25 @@ main {
     }
 
     @media only screen and (min-width: 800px) {
-        .image-box {
 
-            .author-pic {
-                @include article_user-logo(4rem, 4rem);
-            }
+        & {
+            grid-column: 2 / 4;
 
-            span {
-                font-size: $bfs-user-desc;
+            .image-box {
+
+                .author-pic {
+                    @include article_user-logo(4rem, 4rem);
+                }
+    
+                span {
+                    font-size: $bfs-user-desc;
+    
+                    top: 1.3rem;
+                    right: 0;
+                }
             }
         }
+        
     }
 
 
@@ -363,9 +379,7 @@ main {
         all: unset;
         margin-top: 2rem;
 
-        background: $btn-main;
-        padding: .5rem 1rem;
-        cursor: pointer;
+        @include btn__read-more;
     }
 
     @media only screen and (min-width: 800px) {

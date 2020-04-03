@@ -4,6 +4,10 @@ const readMoreBtn = document.querySelector('.read-more');
 const spanDots = document.querySelector('.dots');
 const spanMore = document.querySelector('.more');
 
+const compass = document.getElementById('fixed__nav-btn');
+const back = document.getElementById('menu__undo');
+const ui = document.querySelector('.menu');
+
 //Button Event Handlers
 let isMore = false;
 readMoreBtn.onclick = () => {
@@ -22,3 +26,13 @@ readMoreBtn.onclick = () => {
         isMore = false;
     }
 }
+
+//UI shows up when compass is clicked;
+compass.onclick = () => {
+        ui.style.display = 'block';
+}
+
+back.onclick = () => {
+    ui.style.display = 'none';
+}
+

@@ -1,0 +1,5 @@
+@mixin btn__read-more($background: $btn-main) {
+    background: $background;
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
