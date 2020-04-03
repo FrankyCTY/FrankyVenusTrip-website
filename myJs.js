@@ -1,38 +1,22 @@
+//Dom element
+const readMoreBtn = document.querySelector('.read-more');
 
-// DOM Elements
+const spanDots = document.querySelector('.dots');
+const spanMore = document.querySelector('.more');
 
-const mainBtn = document.querySelector(".mainBtn");
-
-const redBtn = document.querySelector(".redBtn");
-
-const body = document.body;
-
-//Apply the cached theme on reload
-
-const theme = localStorage.getItem("theme");
-
-if (theme) {
-    body.classList.add(theme);
-}
-
-mainBtn.onclick = () => {
-    
-    switch(true) {
-        case body.classList.contains("red"):
-            body.classList.replace("red", "main");
-            localStorage.setItem("theme", "main");
-            break;
+//Button Event Handlers
+let isMore = false;
+readMoreBtn.onclick = () => {
+    if(!isMore) {
+        spanDots.style.display = 'none';
+        spanMore.style.display = 'inline';
+        readMoreBtn.innerHTML = 'Read less';
+        isMore = true;
     }
-
-}
-
-redBtn.onclick = () => {
-    switch(true) {
-        case body.classList.contains("main"):
-            body.classList.replace("main", "red");
-            localStorage.setItem("theme", "red");
-            break;
+    else {
+        spanDots.style.display = 'inline';
+        spanMore.style.display = 'none';
+        readMoreBtn.innerHTML = 'Read more';
+        isMore = false;
     }
 }
-
-

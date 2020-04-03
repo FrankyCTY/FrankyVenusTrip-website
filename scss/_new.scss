@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Montserrat:wght@200;300&family=Quicksand:wght@300;400;500&display=swap');
 @import "./typography";
 @import "./variable";
+@import "./btn";
 // font-family: 'Lato', sans-serif;
 // font-family: 'Montserrat', sans-serif;
 // font-family: 'Quicksand', sans-serif;
@@ -257,7 +258,7 @@ main {
     }
 }
 
-//========= Atricle header =========
+//========= Article header =========
 .article-header {
     display: flex;
     align-items: center;
@@ -341,8 +342,8 @@ main {
 
     position: relative;
 
-    text-align: justify;
-    text-justify: inter-character;
+    // text-align: justify;
+    // text-justify: inter-character;
 
     
     .comment-icon {
@@ -353,6 +354,19 @@ main {
 
     .footer-content {
         @include typo_paragraph(1.2rem, $line-height: 1.8rem, $letter-spacing: 0);
+
+        .more {
+            display: none;
+        }
+    }
+
+    .read-more {
+        all: unset;
+        margin-top: 2rem;
+
+        background: $btn-main;
+        padding: .5rem 1rem;
+        cursor: pointer;
     }
 
     @media only screen and (min-width: 800px) {

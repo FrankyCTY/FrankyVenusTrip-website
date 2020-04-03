@@ -181,9 +181,7 @@ main {
 .article-footer {
   grid-column: 1 / 5;
   margin-top: 3.5rem;
-  position: relative;
-  text-align: justify;
-  text-justify: inter-character; }
+  position: relative; }
   .article-footer .comment-icon {
     position: absolute;
     left: 0;
@@ -192,6 +190,14 @@ main {
     font-size: 1.2rem;
     line-height: 1.8rem;
     letter-spacing: 0; }
+    .article-footer .footer-content .more {
+      display: none; }
+  .article-footer .read-more {
+    all: unset;
+    margin-top: 2rem;
+    background: #87b6d9;
+    padding: .5rem 1rem;
+    cursor: pointer; }
   @media only screen and (min-width: 800px) {
     .article-footer {
       margin-top: 6rem;
