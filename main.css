@@ -75,16 +75,15 @@
   .menu #menu__undo {
     all: unset;
     position: absolute;
-    bottom: 15%;
+    bottom: 5rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    font-size: 2.5rem;
-    color: white;
     cursor: pointer;
     z-index: 1; }
     .menu #menu__undo .icon-Back {
-      font-size: 3rem; }
+      font-size: 3rem;
+      color: white; }
 
 .data {
   position: relative;
@@ -306,7 +305,8 @@ main {
     position: absolute;
     left: 0;
     top: -2rem;
-    font-size: 1.3rem; }
+    color: #87b6d9;
+    font-size: 1.5rem; }
   .article-footer .footer-content {
     font-size: 1.2rem;
     line-height: 1.8rem;
@@ -407,16 +407,15 @@ main {
   .menu #menu__undo {
     all: unset;
     position: absolute;
-    bottom: 15%;
+    bottom: 5rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    font-size: 2.5rem;
-    color: white;
     cursor: pointer;
     z-index: 1; }
     .menu #menu__undo .icon-Back {
-      font-size: 3rem; }
+      font-size: 3rem;
+      color: white; }
 
 .data {
   position: relative;
