@@ -83,7 +83,7 @@
     z-index: 1; }
     .menu #menu__undo .icon-white {
       font-size: 3rem;
-      color: white; }
+      color: #fff; }
 
 .data {
   position: relative;
@@ -415,7 +415,7 @@ main {
     z-index: 1; }
     .menu #menu__undo .icon-white {
       font-size: 3rem;
-      color: white; }
+      color: #fff; }
 
 .data {
   position: relative;
