@@ -4,8 +4,8 @@
 @import "./btn";
 
 //==== Btn to open naviation menu ====
-#fixed__nav-btn {
-    all: unset;
+
+.icon-blue {
     position: fixed;
     right: 1.5rem;
     top: 5rem;
@@ -14,13 +14,13 @@
 
     z-index: 1;
 
-    color: $ui-open-btn;
+    font-size: $compass-size !important;
 
-    .icon-blue {
-        font-size: $compass-size;
-        color: $ui-open-btn;
-    }
+    // transform: scale(1.5);
+    
+    color: $ui-open-btn;
 }
+
 
 .menu {
     z-index: 0;
@@ -125,28 +125,21 @@
     }
 
     // ==== Undo Btn ====
-    #menu__undo {
-        all: unset;
+
+    .icon-white {
         position: absolute;
         bottom: 5rem;
         left: 50%;
+
+        cursor: pointer;
         
         transform: translateX(-50%);
         
-        display: flex;
-    
-        cursor: pointer;
-    
-        z-index: 1;
-
-        .icon-white {
-            position: relative;
-            
-            font-size: $back-size;
-            color: $back-color;
-        }
+        font-size: $back-size;
+        color: $back-color;
     }
 }
+
 
 //==== List Items ====
 .data {
@@ -213,8 +206,7 @@
 //     Media Query
 //=====================
 @media only screen and (min-width: 800px) {
-    #fixed__nav-btn,
-    .menu {
+    .icon-blue {
         display: none;
     }
 
