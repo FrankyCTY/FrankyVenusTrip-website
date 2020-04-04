@@ -81,7 +81,7 @@
     display: flex;
     cursor: pointer;
     z-index: 1; }
-    .menu #menu__undo .icon-white {
+    .menu #menu__undo .icon-Search {
       font-size: 3rem;
       color: #fff; }
 
@@ -413,7 +413,7 @@ main {
     display: flex;
     cursor: pointer;
     z-index: 1; }
-    .menu #menu__undo .icon-white {
+    .menu #menu__undo .icon-Search {
       font-size: 3rem;
       color: #fff; }
 
