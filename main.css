@@ -83,6 +83,7 @@
     cursor: pointer;
     z-index: 1; }
     .menu #menu__undo .icon-white {
+      position: relative;
       font-size: 3rem;
       color: #fff; }
 
@@ -416,6 +417,7 @@ main {
     cursor: pointer;
     z-index: 1; }
     .menu #menu__undo .icon-white {
+      position: relative;
       font-size: 3rem;
       color: #fff; }
 
