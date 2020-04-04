@@ -44,7 +44,7 @@
         opacity: 1;
         cursor: initial; }
       .menu .search-bar:focus-within .search-bar__submit {
-        background: #fff; }
+        color: #fff; }
     .menu .search-bar .search-bar__input {
       font-size: 1.5rem;
       position: absolute;
@@ -376,7 +376,7 @@ main {
         opacity: 1;
         cursor: initial; }
       .menu .search-bar:focus-within .search-bar__submit {
-        background: #fff; }
+        color: #fff; }
     .menu .search-bar .search-bar__input {
       font-size: 1.5rem;
       position: absolute;
