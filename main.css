@@ -83,7 +83,6 @@
   position: relative;
   top: 35%;
   left: 50%;
-  background: pink;
   transform: translate(-50%, -50%); }
   .data ul {
     list-style: none;
@@ -409,7 +408,6 @@ main {
   position: relative;
   top: 35%;
   left: 50%;
-  background: pink;
   transform: translate(-50%, -50%); }
   .data ul {
     list-style: none;
