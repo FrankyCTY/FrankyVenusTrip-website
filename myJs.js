@@ -51,6 +51,10 @@ $('.search-bar, .search-bar__submit, .search-bar__input').click(() => {
     searchBarOpen = true;
 });
 
+$(data).click(() => {
+    searchBarOpen = false;
+});
+
 //Clicking on the area other than menu will go back to main page
 $(ui).click(() => {
     if (!searchBarOpen) {
@@ -62,7 +66,6 @@ $(ui).click(() => {
     }
 });
 $(data).add('.search-bar, .search-bar__submit, .search-bar__input').click(function() {
-    searchBarOpen = false;
     event.stopPropagation();
 });
 
