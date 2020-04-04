@@ -10,7 +10,8 @@
   z-index: 1;
   color: #00a8cc; }
   #fixed__nav-btn .icon-blue {
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    text-rendering: optimizeLegibility; }
 
 .menu {
   z-index: 0;
@@ -342,7 +343,8 @@ main {
   z-index: 1;
   color: #00a8cc; }
   #fixed__nav-btn .icon-blue {
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    text-rendering: optimizeLegibility; }
 
 .menu {
   z-index: 0;
