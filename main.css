@@ -70,37 +70,36 @@
       margin-right: auto;
       transition: background 150ms ease-in-out;
       color: #fff; }
+  .menu .data {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .menu .data ul {
+      list-style: none;
+      font-size: 3.5rem; }
+      .menu .data ul li {
+        text-align: center; }
+        .menu .data ul li a {
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          padding: 2.5rem 0;
+          text-decoration: none;
+          color: #fff;
+          position: relative; }
+          .menu .data ul li a:hover, .menu .data ul li a:focus {
+            background-color: #fff;
+            background-color: #fff;
+            color: #00a8cc; }
   .menu .icon-white {
     position: absolute;
-    bottom: 30%;
+    bottom: 25%;
     left: 50%;
     cursor: pointer;
     transform: translateX(-50%);
     font-size: 3rem;
     color: #fff; }
-
-.data {
-  position: relative;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-  .data ul {
-    list-style: none;
-    font-size: 3.5rem; }
-    .data ul li {
-      text-align: center; }
-      .data ul li a {
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        padding: 2.5rem 0;
-        text-decoration: none;
-        color: #fff;
-        position: relative; }
-        .data ul li a:hover, .data ul li a:focus {
-          background-color: #fff;
-          background-color: #fff;
-          color: #00a8cc; }
 
 @media only screen and (min-width: 800px) {
   .icon-blue {
@@ -395,37 +394,36 @@ main {
       margin-right: auto;
       transition: background 150ms ease-in-out;
       color: #fff; }
+  .menu .data {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .menu .data ul {
+      list-style: none;
+      font-size: 3.5rem; }
+      .menu .data ul li {
+        text-align: center; }
+        .menu .data ul li a {
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          padding: 2.5rem 0;
+          text-decoration: none;
+          color: #fff;
+          position: relative; }
+          .menu .data ul li a:hover, .menu .data ul li a:focus {
+            background-color: #fff;
+            background-color: #fff;
+            color: #00a8cc; }
   .menu .icon-white {
     position: absolute;
-    bottom: 30%;
+    bottom: 25%;
     left: 50%;
     cursor: pointer;
     transform: translateX(-50%);
     font-size: 3rem;
     color: #fff; }
-
-.data {
-  position: relative;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-  .data ul {
-    list-style: none;
-    font-size: 3.5rem; }
-    .data ul li {
-      text-align: center; }
-      .data ul li a {
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        padding: 2.5rem 0;
-        text-decoration: none;
-        color: #fff;
-        position: relative; }
-        .data ul li a:hover, .data ul li a:focus {
-          background-color: #fff;
-          background-color: #fff;
-          color: #00a8cc; }
 
 @media only screen and (min-width: 800px) {
   .icon-blue {
