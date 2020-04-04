@@ -10,7 +10,8 @@
   z-index: 1;
   color: #00a8cc; }
   #fixed__nav-btn .icon-blue {
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    color: #00a8cc; }
 
 .menu {
   z-index: 0;
@@ -72,14 +73,18 @@
       margin-right: auto;
       transition: background 150ms ease-in-out;
       color: #fff; }
-  .menu .icon-white {
+  .menu #menu__undo {
+    all: unset;
     position: absolute;
     bottom: 5rem;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 3rem;
-    color: #fff;
-    cursor: pointer; }
+    display: flex;
+    cursor: pointer;
+    z-index: 1; }
+    .menu #menu__undo .icon-white {
+      font-size: 3rem;
+      color: #fff; }
 
 .data {
   position: relative;
@@ -338,7 +343,8 @@ main {
   z-index: 1;
   color: #00a8cc; }
   #fixed__nav-btn .icon-blue {
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    color: #00a8cc; }
 
 .menu {
   z-index: 0;
@@ -400,14 +406,18 @@ main {
       margin-right: auto;
       transition: background 150ms ease-in-out;
       color: #fff; }
-  .menu .icon-white {
+  .menu #menu__undo {
+    all: unset;
     position: absolute;
     bottom: 5rem;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 3rem;
-    color: #fff;
-    cursor: pointer; }
+    display: flex;
+    cursor: pointer;
+    z-index: 1; }
+    .menu #menu__undo .icon-white {
+      font-size: 3rem;
+      color: #fff; }
 
 .data {
   position: relative;

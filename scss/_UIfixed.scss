@@ -18,6 +18,7 @@
 
     .icon-blue {
         font-size: $compass-size;
+        color: $ui-open-btn;
     }
 }
 
@@ -123,43 +124,27 @@
         }
     }
 
-
-
-    //==== Undo Btn ====
-    // #menu__undo {
-    //     all: unset;
-    //     position: absolute;
-    //     bottom: 5rem;
-    //     left: 50%;
+    // ==== Undo Btn ====
+    #menu__undo {
+        all: unset;
+        position: absolute;
+        bottom: 5rem;
+        left: 50%;
         
-    //     transform: translateX(-50%);
+        transform: translateX(-50%);
         
-    //     display: flex;
+        display: flex;
     
-    //     cursor: pointer;
+        cursor: pointer;
     
-    //     z-index: 1;
-
-    //     .icon-white {
-            
-    //         font-size: $back-size;
-    //         color: $back-color;
-    //     }
-    // }
+        z-index: 1;
 
         .icon-white {
-            position: absolute;
-            bottom: 5rem;
-            left: 50%;
-        
-            transform: translateX(-50%);
-
+            
             font-size: $back-size;
             color: $back-color;
-
-            cursor: pointer;
         }
-    
+    }
 }
 
 //==== List Items ====
