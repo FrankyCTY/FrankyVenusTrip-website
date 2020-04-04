@@ -7,6 +7,8 @@ const spanMore = document.querySelector('.more');
 const compass = document.querySelector('.icon-blue');
 const back = document.querySelector('.icon-white');
 const ui = document.querySelector('.menu');
+const uiSearchBar = document.querySelector('.search-bar');
+const data = document.querySelector('.data');
 
 //Button Event Handlers
 let isMore = false;
@@ -28,13 +30,26 @@ readMoreBtn.onclick = () => {
 }
 
 //UI shows up when compass is clicked;
+// let menuOpen = false;
 compass.onclick = () => {
     ui.style.opacity = '1';
     ui.style.top = '0';
+    // menuOpen = true;
 }
 
-back.onclick = () => {
+// back.onclick = () => {
+//     ui.style.opacity = '0';
+//     ui.style.top = '-999px';
+//     // menuOpen = false;
+// }
+
+//Clicking on the area other than menu will go back to main page
+$(ui).click(() => {
     ui.style.opacity = '0';
     ui.style.top = '-999px';
-}
+    // menuOpen = true;
+});
+$(data).add('.search-bar, .search-bar__submit, .search-bar__input').click(function() {
+    event.stopPropagation();
+});
 

@@ -128,7 +128,7 @@
 
     .icon-white {
         position: absolute;
-        bottom: 5rem;
+        bottom: 30%;
         left: 50%;
 
         cursor: pointer;
@@ -144,8 +144,10 @@
 //==== List Items ====
 .data {
     position: relative;
-    top: 50%;
+    top: 35%;
     left: 50%;
+    
+background: pink;
 
     transform: translate(-50%, -50%);
 
@@ -164,7 +166,7 @@
                 display: inline-block;
                 height: 100%;
                 width: 100%;
-                padding: 4rem 0;
+                padding: 2.5rem 0;
 
                 text-decoration: none;
                 color: $ui-btn-color;
@@ -177,25 +179,7 @@
                     background-color: $ui-li-hover;
                     color: $ui-menu-main;
                 }
-                    
-                // &:first:before {
-                //     content: '';
-                //     position: absolute;
-                //     border-bottom: 2px solid black;
-                //     left: 0;
-                //     top: 0;
-                    
-                //     width: 100vw;
-                // }
-                    
-                // &::after {
-                //     content: '';
-                //     position: absolute;
-                //     width: 100vw;
-                //     border-bottom: 2px solid white;
-                //     left: 0;
-                //     bottom: 0;
-                // }  
+                
             }
         }
     }
