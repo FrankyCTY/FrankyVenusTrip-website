@@ -10,13 +10,15 @@
     right: 1.5rem;
     top: 5rem;
 
-    font-size: 2.5rem;
-
     cursor: pointer;
 
     z-index: 1;
 
     color: $ui-open-btn;
+
+    .icon-compass {
+        font-size: $compass-size;
+    }
 }
 
 .menu {
@@ -32,8 +34,6 @@
     width: 100vw;
 
     z-index: 2;
-
-    display: fixed;
     
     transition: opacity .4s ease-out;
 
@@ -129,9 +129,13 @@
     #menu__undo {
         all: unset;
         position: absolute;
-        bottom: 1rem;
-        left: 1rem;
-    
+        bottom: 15%;
+        left: 50%;
+        
+        transform: translateX(-50%);
+        
+        display: flex;
+
         font-size: 2.5rem;
 
         color: white;
@@ -139,6 +143,10 @@
         cursor: pointer;
     
         z-index: 1;
+
+        .icon-Back {
+            font-size: $back-size;
+        }
     }
     
 }
@@ -180,24 +188,24 @@
                     color: $ui-menu-main;
                 }
                     
-                &:first:before {
-                    content: '';
-                    position: absolute;
-                    border-bottom: 2px solid white;
-                    left: 0;
-                    top: 0;
+                // &:first:before {
+                //     content: '';
+                //     position: absolute;
+                //     border-bottom: 2px solid black;
+                //     left: 0;
+                //     top: 0;
                     
-                    width: 100vw;
-                }
+                //     width: 100vw;
+                // }
                     
-                &::after {
-                    content: '';
-                    position: absolute;
-                    width: 100vw;
-                    border-bottom: 2px solid white;
-                    left: 0;
-                    bottom: 0;
-                }  
+                // &::after {
+                //     content: '';
+                //     position: absolute;
+                //     width: 100vw;
+                //     border-bottom: 2px solid white;
+                //     left: 0;
+                //     bottom: 0;
+                // }  
             }
         }
     }

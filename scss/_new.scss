@@ -353,7 +353,7 @@ main {
 .article-footer {
     grid-column: 1 / 5;
 
-    margin-top: 3.5rem;
+    margin-top: 4.5rem;
     // padding: 0 15rem 0 5rem;
 
     position: relative;
@@ -362,10 +362,12 @@ main {
     // text-justify: inter-character;
 
     
-    .comment-icon {
+    .icon-comment {
         position: absolute;
         left: 0;
-        top: -1.6rem;
+        top: -2rem;
+
+        font-size: $comment-size;
     }
 
     .footer-content {
