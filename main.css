@@ -24,13 +24,14 @@ body {
   grid-template-columns: repeat(5, 1fr);
   row-gap: 8rem; }
   body main {
-    margin-top: -8rem; }
+    margin-top: calc(4rem); }
 
 nav {
   background: #f3c83e;
   height: 4rem;
-  position: relative;
-  width: 100vw;
+  position: absolute;
+  left: 0;
+  right: 0;
   z-index: 1;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
   nav .nav__icon {
