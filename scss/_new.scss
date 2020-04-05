@@ -42,7 +42,8 @@ body {
   row-gap: $body-row-gap-sm;
 
   main {
-    margin-top: calc(4rem);
+    // margin-top: -$body-row-gap-sm;
+    margin-top: 4rem;
   }
 }
 
@@ -54,6 +55,8 @@ nav {
   height: 4rem;
 
   position: absolute;
+  // width: 100vw;
+
   left: 0;
   right: 0;
 

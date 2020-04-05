@@ -24,7 +24,7 @@ body {
   grid-template-columns: repeat(5, 1fr);
   row-gap: 8rem; }
   body main {
-    margin-top: calc(4rem); }
+    margin-top: 4rem; }
 
 nav {
   background: #f3c83e;
@@ -231,6 +231,7 @@ main {
         font-size: 1.5rem; } }
 
 .lightbox-wrapper {
+  grid-column: 1 / -1;
   width: 80vw;
   margin: 0 auto; }
   .lightbox-wrapper .carousel-control-prev,
