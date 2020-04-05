@@ -229,16 +229,20 @@ main {
       .article-footer .read-more {
         font-size: 1.5rem; } }
 
-.lightbox-wrapper .carousel-control-prev,
-.lightbox-wrapper .carousel-control-next {
-  bottom: 0%;
-  opacity: 0.2; }
-
-.lightbox-wrapper .carousel-control-prev {
-  left: -1rem; }
-
-.lightbox-wrapper .carousel-control-next {
-  right: -1rem; }
+.lightbox-wrapper {
+  width: 80vw;
+  margin: 0 auto; }
+  .lightbox-wrapper .carousel-control-prev,
+  .lightbox-wrapper .carousel-control-next {
+    width: 4rem;
+    background: black;
+    opacity: 0.5;
+    opacity: 0.2; }
+  .lightbox-wrapper .carousel-control-prev {
+    left: -4rem;
+    opacity: 0.5; }
+  .lightbox-wrapper .carousel-control-next {
+    right: -4rem; }
 
 @media only screen and (min-width: 800px) {
   .lightbox-wrapper {
