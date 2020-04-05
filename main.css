@@ -144,6 +144,7 @@ nav {
         nav .search-box .icon-Search {
           position: absolute;
           right: 0.2rem;
+          bottom: 0;
           font-size: 1.5rem; } }
 
 main {
