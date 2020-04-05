@@ -141,10 +141,9 @@ nav {
           border: 1px solid;
           padding: 0 0.2rem;
           font-size: 1.5rem; }
-        nav .search-box .search__icon {
+        nav .search-box .icon-Search {
           position: absolute;
           right: 0.2rem;
-          top: 0.3rem;
           font-size: 1.5rem; } }
 
 main {
