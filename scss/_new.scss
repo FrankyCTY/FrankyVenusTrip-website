@@ -38,7 +38,12 @@ body {
 
   // grid-row: repeat(4, 1fr) auto;
 
+  //row-gap except the first item 'main' section
   row-gap: $body-row-gap-sm;
+
+  main {
+    margin-top: -$body-row-gap-sm;
+  }
 }
 
 //========= navigation bar =========

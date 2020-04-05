@@ -23,6 +23,8 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   row-gap: 8rem; }
+  body main {
+    margin-top: -8rem; }
 
 nav {
   background: #f3c83e;
