@@ -47,11 +47,13 @@ body {
 
   @media only screen and (min-width: 800px) {
     & {
-      padding: 0 $body-row-gap-sm;
+      // padding: 0 $body-row-gap-sm;
+      padding: 0;
     }
 
     main {
       margin-top: $margin-top-desk;
+      padding: 0 $body-row-gap-sm;
     }
   }
 }
