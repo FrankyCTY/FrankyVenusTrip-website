@@ -236,13 +236,7 @@ main {
   margin: 0 auto; }
   .lightbox-wrapper .carousel-control-prev,
   .lightbox-wrapper .carousel-control-next {
-    width: 4rem;
-    background: black;
-    opacity: 0.3; }
-  .lightbox-wrapper .carousel-control-prev {
-    left: -4rem; }
-  .lightbox-wrapper .carousel-control-next {
-    right: -4rem; }
+    width: 4rem; }
 
 @media only screen and (min-width: 800px) {
   .lightbox-wrapper {
