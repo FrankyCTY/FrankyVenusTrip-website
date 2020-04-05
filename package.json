@@ -13,5 +13,8 @@
     "gsap": "^3.2.6",
     "jquery": "^3.4.1",
     "sass": "^1.26.3"
+  },
+  "devDependencies": {
+    "prettier": "2.0.2"
   }
 }

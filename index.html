@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
     <title>Document</title>
-    <link rel="stylesheet" href="main.css">
 
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
-
-    <!-- iconfront -->
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_1734370_si0cravarro.css">
-
-    <!-- fontawesome extra signature for apple devices -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" type="text/css" />
-    
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 
@@ -24,92 +17,220 @@
     <script defer src="./myJs.js"></script>
 
     <!-- jquery -->
-    <!-- <script src="C:\Users\FrankyVenus\Documents\FrankyVenusTrip-website\node_modules\jquery\dist\jquery.min.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-</head>
-<body>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
 
+    <!-- Bootstrap 4 -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap 4 javascript -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/@fortawesome/fontawesome-free/css/all.css"
+    />
+
+    <!-- iconfront -->
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/font_1734370_si0cravarro.css"
+    />
+
+    <!-- fontawesome extra signature for apple devices -->
+    <link
+      href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
     <!-- UI fixed elements -->
     <!-- <button id="fixed__nav-btn"><i class="iconfont icon-blue"></i></button> -->
 
     <i class="iconfont icon-blue"></i>
 
     <div class="menu">
+      <div class="search-bar">
+        <input
+          type="text"
+          class="search-bar__input"
+          placeholder="Search our journey"
+          aria-label="search"
+        />
+        <button class="search-bar__submit" aria-label="submit search">
+          <i class="iconfont icon-Search"></i>
+        </button>
+      </div>
 
-        <div class="search-bar">
-            <input type="text" class="search-bar__input" placeholder="Search our journey" aria-label="search"/>
-            <button class="search-bar__submit" aria-label="submit search"><i class="iconfont icon-Search"></i></button>
-        </div>
+      <!-- <button id="menu__undo"><i class="iconfont icon-white"></i></button> -->
+      <i class="iconfont icon-white"></i>
 
-        <!-- <button id="menu__undo"><i class="iconfont icon-white"></i></button> -->
-        <i class="iconfont icon-white"></i>
-
-        <div class="data">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Our Story</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
+      <div class="data">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    
 
     <!-- Navigation bar -->
     <nav>
-        <img src="./FrankyVenus logo--transparent.png" class="nav__icon" alt="FrankyVenus logo">
+      <img
+        src="./FrankyVenus logo--transparent.png"
+        class="nav__icon"
+        alt="FrankyVenus logo"
+      />
 
-        <input type="checkbox" class="toggle-box" id="toggle">
+      <input type="checkbox" class="toggle-box" id="toggle" />
 
-        <label for="toggle" class="toggle-btn"><span></span></label>
+      <label for="toggle" class="toggle-btn"><span></span></label>
 
-        <ul class="nav__items">
-            <li class="nav__item"><a href="#" class="nav__link">home</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">about</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">contact</a></li>
-        </ul>
+      <ul class="nav__items">
+        <li class="nav__item"><a href="#" class="nav__link">home</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">about</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">contact</a></li>
+      </ul>
 
-        <div class="search-box">
-            <input type="text" class="search__input" placeholder="Search our trip">
-            <i class="fas fa-search search__icon"></i>
-        </div>
+      <div class="search-box">
+        <input
+          type="text"
+          class="search__input"
+          placeholder="Search our trip"
+        />
+        <i class="fas fa-search search__icon"></i>
+      </div>
     </nav>
 
     <!-- Article Content -->
     <main>
+      <div class="article-header">
+        <h1 class="article-title">Our Trip</h1>
+      </div>
 
-        <div class="article-header">
-            <h1 class="article-title">Our Trip</h1>
+      <div class="article-content">
+        <img src="./DSCF2770.JPG" class="content__img" alt="Takapuna" />
+      </div>
+
+      <div class="content-attribute">
+        <div class="image-box">
+          <img
+            src="./IMG_20180818_022023.jpg"
+            class="author-pic"
+            alt="Franky Venus"
+          />
+          <span>by <strong>Venus and Franky</strong> on 2 April 2020</span>
         </div>
+      </div>
 
-        <div class="article-content">
-            <img src="./DSCF2770.JPG" class="content__img"alt="Takapuna">
-        </div>
+      <div class="article-footer">
+        <i class="iconfont icon-comment"></i>
+        <p class="footer-content">
+          Franky Venus love Lorem ipsum dolor, sit amet consectetur adipisicing
+          elit. Quo necessitatibus perspiciatis dignissimos similique delectus
+          blanditiis, deleniti tempore! Autem labore maiores similique, quod
+          perferendis repudiandae beatae laboriosam<span class="dots">...</span
+          ><span class="more"
+            >unde, nihil, eos repellat? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Nihil quod fugit itaque. Maiores aliquid quas aut
+            iste maxime, praesentium, incidunt velit asperiores saepe iure qui
+            voluptates fuga nulla sapiente provident.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Nihil quod fugit itaque. Maiores
+            aliquid quas aut iste maxime, praesentium, incidunt velit asperiores
+            saepe iure qui voluptates fuga nulla sapiente provident Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Nihil quod fugit
+            itaque. Maiores aliquid quas aut iste maxime, praesentium, incidunt
+            velit asperiores saepe iure qui voluptates fuga nulla sapiente
+            provident Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Nihil quod fugit itaque. Maiores aliquid quas aut iste maxime,
+            praesentium, incidunt velit asperiores saepe iure qui voluptates
+            fuga nulla sapiente provident</span
+          >
+        </p>
 
-        <div class="content-attribute">
-            <div class="image-box">
-                <img src="./IMG_20180818_022023.jpg" class="author-pic" alt="Franky Venus">
-                <span>by <strong>Venus and Franky</strong> on 2 April 2020</span>
-            </div>
-
-            <!-- <div class="tag-box">
-                <div class="tag1 tags">New Zealand</div>
-                <div class="tag2 tags">Auckland</div>
-            </div> -->
-
-        </div>
-
-        <div class="article-footer">
-            <i class="iconfont icon-comment"></i>
-            <p class="footer-content">Franky Venus love Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo necessitatibus perspiciatis dignissimos similique delectus blanditiis, deleniti tempore! Autem labore maiores similique, quod perferendis repudiandae beatae laboriosam<span class="dots">...</span><span class="more">unde, nihil, eos repellat?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quod fugit itaque. Maiores aliquid quas aut iste maxime, praesentium, incidunt velit asperiores saepe iure qui voluptates fuga nulla sapiente provident.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quod fugit itaque. Maiores aliquid quas aut iste maxime, praesentium, incidunt velit asperiores saepe iure qui voluptates fuga nulla sapiente provident
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quod fugit itaque. Maiores aliquid quas aut iste maxime, praesentium, incidunt velit asperiores saepe iure qui voluptates fuga nulla sapiente provident
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quod fugit itaque. Maiores aliquid quas aut iste maxime, praesentium, incidunt velit asperiores saepe iure qui voluptates fuga nulla sapiente provident</span></p>
-
-            <button type="button" class="read-more">Read more</button>
-        </div>
-        
+        <button type="button" class="read-more">Read more</button>
+      </div>
     </main>
 
+    <!-- Mobile - Light box / Carousel -->
 
-</body>
+    <!-- https://source.unsplash.com/user/erondu/800x400s -->
+
+    <!-- food-carousel -->
+    <div class="lightbox-wrapper">
+      <div
+        id="food-carousel"
+        class="carousel slide"
+        data-ride="carousel"
+        data-interval="10000"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="d-block w-100"
+              src="./Image/IMG-20181230-WA0000.jpg"
+              alt="First slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="./Image/IMG-20181231-WA0020.jpg"
+              alt="Second slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="./Image/IMG-20181231-WA0021.jpg"
+              alt="Third slide"
+            />
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#food-carousel"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#food-carousel"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,33 @@
+//========== Default Settings ==========
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Montserrat:wght@200;300&family=Quicksand:wght@300;400;500&display=swap");
+@import "./typography";
+@import "./variable";
+@import "./btn";
+
+//========================
+//  Lignt Box Variables
+//========================
+:root {
+}
+
+.lightbox-wrapper {
+  .carousel-control-prev,
+  .carousel-control-next {
+    bottom: 0%;
+
+    opacity: 0.2;
+  }
+
+  .carousel-control-prev {
+    left: -1rem;
+  }
+  .carousel-control-next {
+    right: -1rem;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .lightbox-wrapper {
+    display: none;
+  }
+}
