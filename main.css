@@ -224,7 +224,9 @@ main {
   @media only screen and (min-width: 800px) {
     .article-footer {
       margin-top: 6rem;
-      padding: 0 45rem 0 8rem; }
+      padding: 0 8rem 0 8rem;
+      text-align: justify;
+      text-justify: inter-character; }
       .article-footer .icon-comment {
         font-size: 3rem;
         left: 3rem; }
@@ -295,7 +297,7 @@ main {
   z-index: 0;
   position: fixed;
   background: #00a8cc;
-  top: -999px;
+  top: -999rem;
   left: 0;
   bottom: 0;
   right: 0;
