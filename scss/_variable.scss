@@ -25,6 +25,8 @@ $ft-title-franky: $blue-light;
 $nav-btn: $grey-dark;
 $nav-btn-hover: $grey-dark;
 
+$nav-height-desk: 6rem;
+
 $search-color: #fff;
 
 $comment-icon: $grey-dark;
@@ -68,5 +70,9 @@ $comment-color: $blue-light;
 $back-size: 3rem;
 $back-color: #fff;
 
-//---- Grid Layout ----
+//---- Main Layout ----
+$margin-top-desk: 8rem;
+$margin-top-mob: 4rem;
+
+//---- Grid layout ----
 $body-row-gap-sm: 8rem;

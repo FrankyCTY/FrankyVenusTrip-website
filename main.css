@@ -20,11 +20,17 @@ body {
 body {
   background: white;
   font-family: "Quicksand", sans-serif;
+  padding: 0 5rem;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 2rem 1fr 1fr 2rem;
   row-gap: 8rem; }
   body main {
     margin-top: 4rem; }
+  @media only screen and (min-width: 800px) {
+    body {
+      padding: 0 8rem; }
+    body main {
+      margin-top: 8rem; } }
 
 nav {
   background: #f3c83e;
@@ -143,13 +149,11 @@ nav {
 main {
   grid-column: 1 / -1;
   display: grid;
-  padding: 1rem 5rem;
   grid-template-columns: 2rem 1fr 1fr 2rem;
   grid-template-rows: [page-start] 6rem [canvas-start] 55vh [attribute-start] 0.5rem [canvas-end] 1.5rem [attribute-end] auto [bottom]; }
   @media only screen and (min-width: 800px) {
     main {
-      grid-template-rows: [page-start] 6rem [canvas-start] 55vh [attribute-start] 0.8rem [canvas-end] 2rem [attribute-end] auto [bottom];
-      padding: 8rem 8rem; } }
+      grid-template-rows: [page-start] 6rem [canvas-start] 55vh [attribute-start] 0.8rem [canvas-end] 2rem [attribute-end] auto [bottom]; } }
 
 .article-header {
   display: flex;
@@ -232,15 +236,50 @@ main {
 
 .lightbox-wrapper {
   grid-column: 1 / -1;
-  width: 80vw;
   margin: 0 auto; }
   .lightbox-wrapper .carousel-control-prev,
   .lightbox-wrapper .carousel-control-next {
     width: 4rem; }
 
+.food-grid-wrapper {
+  display: none; }
+
 @media only screen and (min-width: 800px) {
   .lightbox-wrapper {
-    display: none; } }
+    display: none; }
+  .food-grid-wrapper {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, calc(100% / 4));
+    grid-template-rows: repeat(2, minmax(200px, 350px));
+    grid-template-areas: "div1 div2 div3 div4" "div5 div6 div7 div8";
+    background: black; }
+    .food-grid-wrapper .food-grid__img {
+      width: 100%;
+      overflow: hidden; }
+      .food-grid-wrapper .food-grid__img img {
+        opacity: 0.6;
+        transform: scale(1.12);
+        transition: transform 0.5s ease-in-out; }
+        .food-grid-wrapper .food-grid__img img:hover {
+          opacity: 1;
+          transform: scale(1); }
+    .food-grid-wrapper .grid--1 {
+      grid-area: div1; }
+    .food-grid-wrapper .grid--2 {
+      grid-area: div2; }
+    .food-grid-wrapper .grid--3 {
+      grid-area: div3; }
+    .food-grid-wrapper .grid--4 {
+      grid-area: div4; }
+    .food-grid-wrapper .grid--5 {
+      grid-area: div5; }
+    .food-grid-wrapper .grid--6 {
+      grid-area: div6; }
+    .food-grid-wrapper .grid--7 {
+      grid-area: div7; }
+    .food-grid-wrapper .grid--8 {
+      grid-area: div8; } }
 
 .icon-blue {
   position: fixed;

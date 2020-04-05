@@ -10,9 +10,11 @@
 :root {
 }
 
+//==============Mobile version food gallery=============
 .lightbox-wrapper {
   grid-column: 1 / -1;
-  width: 80vw;
+
+  // width: 80vw;
 
   margin: 0 auto;
 
@@ -29,8 +31,75 @@
   }
 }
 
+.food-grid-wrapper {
+  display: none;
+}
+
 @media only screen and (min-width: 800px) {
   .lightbox-wrapper {
     display: none;
+  }
+
+  //================Desktop version food gallery================
+  .food-grid-wrapper {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(4, calc(100% / 4));
+    grid-template-rows: repeat(2, minmax(200px, 350px));
+
+    grid-template-areas:
+      "div1 div2 div3 div4"
+      "div5 div6 div7 div8";
+
+    background: black;
+
+    .food-grid__img {
+      width: 100%;
+      overflow: hidden;
+
+      img {
+        opacity: 0.6;
+        transform: scale(1.12);
+        transition: transform 0.5s ease-in-out;
+
+        &:hover {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
+    .grid--1 {
+      grid-area: div1;
+    }
+
+    .grid--2 {
+      grid-area: div2;
+    }
+
+    .grid--3 {
+      grid-area: div3;
+    }
+
+    .grid--4 {
+      grid-area: div4;
+    }
+
+    .grid--5 {
+      grid-area: div5;
+    }
+
+    .grid--6 {
+      grid-area: div6;
+    }
+
+    .grid--7 {
+      grid-area: div7;
+    }
+
+    .grid--8 {
+      grid-area: div8;
+    }
   }
 }

@@ -33,17 +33,26 @@ body {
   background: $bg-main;
   font-family: "Quicksand", sans-serif;
 
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  padding: 0 5rem;
 
-  // grid-row: repeat(4, 1fr) auto;
+  display: grid;
+  grid-template-columns: 2rem 1fr 1fr 2rem;
 
   //row-gap except the first item 'main' section
   row-gap: $body-row-gap-sm;
 
   main {
-    // margin-top: -$body-row-gap-sm;
-    margin-top: 4rem;
+    margin-top: $margin-top-mob;
+  }
+
+  @media only screen and (min-width: 800px) {
+    & {
+      padding: 0 $body-row-gap-sm;
+    }
+
+    main {
+      margin-top: $margin-top-desk;
+    }
   }
 }
 
@@ -258,7 +267,7 @@ main {
 
   display: grid;
 
-  padding: 1rem 5rem;
+  // padding: 1rem 5rem;
 
   grid-template-columns: 2rem 1fr 1fr 2rem;
   grid-template-rows:
@@ -269,7 +278,7 @@ main {
     grid-template-rows:
       [page-start] 6rem [canvas-start] 55vh [attribute-start] 0.8rem [canvas-end]
       2rem [attribute-end] auto [bottom];
-    padding: 8rem 8rem;
+    // padding: 8rem 0;
   }
 }
 
