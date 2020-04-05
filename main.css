@@ -236,10 +236,9 @@ main {
   .lightbox-wrapper .carousel-control-next {
     width: 4rem;
     background: black;
-    opacity: 0.5; }
+    opacity: 0.3; }
   .lightbox-wrapper .carousel-control-prev {
-    left: -4rem;
-    opacity: 0.5; }
+    left: -4rem; }
   .lightbox-wrapper .carousel-control-next {
     right: -4rem; }
 
@@ -306,6 +305,7 @@ main {
       .menu .search-bar .search-bar__input::placeholder {
         color: #fff; }
     .menu .search-bar .search-bar__submit {
+      outline: none;
       font-size: 1.5rem;
       cursor: pointer;
       border: none;

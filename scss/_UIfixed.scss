@@ -104,6 +104,8 @@
     }
 
     .search-bar__submit {
+      // position: absolute;
+      outline: none;
       font-size: $fs-ui-search;
       cursor: pointer;
       border: none;
