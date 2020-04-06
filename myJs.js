@@ -1,7 +1,15 @@
 $(document).ready(function () {
   //Import Materialize Elements and functions
   $(".carousel").carousel();
+
+  autoplay();
+  function autoplay() {
+    $(".carousel").carousel("next");
+    setTimeout(autoplay, 4000);
+  }
+
   $(".materialboxed").materialbox();
+  $(".tooltipped").tooltip();
 
   //Dom element
   const readMoreBtn = document.querySelector(".read-more");
