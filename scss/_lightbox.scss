@@ -14,14 +14,24 @@
   display: none;
 }
 
-.carousel {
+.carousel-food {
   grid-column: 1 / -1;
+
+  // background-image: url(../DSCF2770.JPG);
+
+  margin-top: 0rem;
+
+  height: 200px;
+
+  .carousel {
+    height: inherit;
+  }
 
   // width: 80vw;
 }
 
 @media only screen and (min-width: 800px) {
-  .carousel {
+  .carousel-food {
     display: none;
   }
 

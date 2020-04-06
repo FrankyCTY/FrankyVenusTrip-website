@@ -248,11 +248,15 @@ main {
 .food-grid-wrapper {
   display: none; }
 
-.carousel {
-  grid-column: 1 / -1; }
+.carousel-food {
+  grid-column: 1 / -1;
+  margin-top: 0rem;
+  height: 200px; }
+  .carousel-food .carousel {
+    height: inherit; }
 
 @media only screen and (min-width: 800px) {
-  .carousel {
+  .carousel-food {
     display: none; }
   .food-grid-wrapper {
     grid-column: 1 / -1;
