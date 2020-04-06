@@ -216,11 +216,12 @@ nav {
 
       .nav__items {
         all: unset;
+
         list-style: none;
 
         font-size: 1.8rem;
 
-        transform: translateX(25%);
+        margin-left: 16rem;
 
         .nav__item {
           all: unset;

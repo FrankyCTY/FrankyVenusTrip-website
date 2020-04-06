@@ -126,7 +126,7 @@ nav {
         all: unset;
         list-style: none;
         font-size: 1.8rem;
-        transform: translateX(25%); }
+        margin-left: 16rem; }
         nav .nav__items .nav__item {
           all: unset;
           padding: 0 2rem; }
