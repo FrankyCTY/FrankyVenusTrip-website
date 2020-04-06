@@ -33,7 +33,12 @@ body {
   background: $bg-main;
   font-family: "Quicksand", sans-serif;
 
-  padding: 0 5rem;
+  padding: 0;
+
+  main {
+    margin-top: 5rem;
+    padding: 0 5rem;
+  }
 
   display: grid;
   grid-template-columns: 2rem 1fr 1fr 2rem;
