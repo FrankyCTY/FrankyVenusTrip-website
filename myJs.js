@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  //Import Materialize Elements and functions
+  $(".carousel").carousel();
+  $(".materialboxed").materialbox();
+
   //Dom element
   const readMoreBtn = document.querySelector(".read-more");
 

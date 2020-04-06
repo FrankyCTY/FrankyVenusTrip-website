@@ -60,7 +60,7 @@ body {
 
 //========= navigation bar =========
 
-nav {
+.nav {
   background: $nav-main;
 
   height: 4rem;
@@ -247,6 +247,15 @@ nav {
           padding: 0 0.2rem;
 
           font-size: 1.5rem;
+
+          &::placeholder {
+            color: black;
+          }
+
+          &:focus {
+            border-bottom: 1px solid #000000 !important;
+            box-shadow: none !important;
+          }
         }
 
         .icon-Search {

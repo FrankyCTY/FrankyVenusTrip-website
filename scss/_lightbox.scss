@@ -10,33 +10,18 @@
 :root {
 }
 
-//==============Mobile version food gallery=============
-.lightbox-wrapper {
-  grid-column: 1 / -1;
-
-  // width: 80vw;
-
-  margin: 0 auto;
-
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 4rem;
-  }
-
-  .carousel-control-prev {
-    // left: -4rem;
-  }
-  .carousel-control-next {
-    // right: -4rem;
-  }
-}
-
 .food-grid-wrapper {
   display: none;
 }
 
+.carousel {
+  grid-column: 1 / -1;
+
+  // width: 80vw;
+}
+
 @media only screen and (min-width: 800px) {
-  .lightbox-wrapper {
+  .carousel {
     display: none;
   }
 
@@ -76,6 +61,8 @@
         &:hover {
           opacity: 1;
           transform: scale(1);
+
+          cursor: pointer;
         }
       }
     }
