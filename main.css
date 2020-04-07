@@ -462,6 +462,9 @@ main {
   .auckland-section--2018 .section-content .image-container {
     margin-top: 3rem;
     margin-bottom: 1rem;
+    perspective: 500;
+    -webkit-perspective: 500;
+    /* Safari and Chrome */
     cursor: pointer; }
     .auckland-section--2018 .section-content .image-container img {
       width: 100%;
