@@ -83,3 +83,9 @@ $(document).ready(function () {
       event.stopPropagation();
     });
 });
+
+// Preloader
+window.addEventListener("load", () => {
+  const preloader = document.querySelector(".preloader-page");
+  preloader.classList.add("preloader-page--finish");
+});
