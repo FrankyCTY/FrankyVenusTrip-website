@@ -318,7 +318,8 @@ main {
     top: 50%; }
     @media only screen and (max-width: 800px) {
       .preloader-page h2 {
-        font-size: 2rem; } }
+        font-size: 2rem;
+        font-weight: 300; } }
 
 .preloader-page--finish {
   opacity: 0;
