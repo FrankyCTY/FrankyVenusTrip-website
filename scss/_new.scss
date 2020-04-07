@@ -44,7 +44,7 @@ body {
   grid-template-columns: 2rem 1fr 1fr 2rem;
 
   //row-gap except the first item 'main' section
-  row-gap: $body-row-gap-sm;
+  // row-gap: $body-row-gap-sm;
 
   main {
     margin-top: $margin-top-mob;
