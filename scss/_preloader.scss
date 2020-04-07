@@ -21,6 +21,11 @@
   h2 {
     position: absolute;
     top: 50%;
+
+    //Mobile -------- h2 fontsize
+    @media only screen and (max-width: 800px) {
+      font-size: 2rem;
+    }
   }
 }
 

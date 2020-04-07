@@ -316,6 +316,9 @@ main {
   .preloader-page h2 {
     position: absolute;
     top: 50%; }
+    @media only screen and (max-width: 800px) {
+      .preloader-page h2 {
+        font-size: 2rem; } }
 
 .preloader-page--finish {
   opacity: 0;
