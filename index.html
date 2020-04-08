@@ -58,140 +58,105 @@
   </head>
 
   <body>
-    <!-- UI fixed elements -->
-    <i class="iconfont icon-blue"></i>
+    <!-- ========================= Navigation Bar ====================== -->
 
-    <div class="menu">
-      <div class="search-bar">
-        <input
-          type="text"
-          class="search-bar__input"
-          placeholder="Search our journey"
-          aria-label="search"
-        />
-        <button class="search-bar__submit" aria-label="submit search">
-          <i class="iconfont icon-Search"></i>
-        </button>
-      </div>
-
-      <!-- <button id="menu__undo"><i class="iconfont icon-white"></i></button> -->
-      <i class="iconfont icon-white"></i>
-
-      <div class="data">
-        <ul>
+    <nav>
+      <div class="nav-wrapper container">
+        <a href="#!" class="brand-logo"
+          ><img src="./FrankyVenus logo--transparent.png" alt=""
+        /></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="right hide-on-med-and-down nav-items">
           <li><a href="#">Home</a></li>
-          <li><a href="#">Our Story</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Theme</a></li>
+          <li><a href="#">Gallery</a></li>
         </ul>
       </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Theme</a></li>
+      <li><a href="#">Gallery</a></li>
+    </ul>
+
+    <header>
+      <h1 class="header__title">Auckland</h1>
+    </header>
+
+    <div class="introduction">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, error
+        sint? Possimus, molestias veniam qui a et veritatis mollitia ipsam
+        autem? Itaque tempora voluptates dolore corrupti libero? Perferendis, ex
+        ullam.
+      </p>
     </div>
 
-    <!-- Navigation bar -->
-    <div class="nav">
-      <img
-        src="./FrankyVenus logo--transparent.png"
-        class="nav__icon"
-        alt="FrankyVenus logo"
-      />
+    <!-- Trip Section (Mobile only) -->
+    <!-- Auckland -->
 
-      <input type="checkbox" class="toggle-box" id="toggle" />
+    <!-- <img src="./Image/2018AuckImg/Auckland/dinner.jpg" alt="" /> -->
 
-      <label for="toggle" class="toggle-btn"><span></span></label>
+    <!-- <div class="text-container card-panel">
+      <p>
+        We had a nice dinner with our friends, Roy and Luna in a seafood
+        restaurant located at the Auckland Harbour.
+      </p>
+    </div> -->
 
-      <ul class="nav__items">
-        <li class="nav__item"><a href="#" class="nav__link">home</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">about</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">contact</a></li>
-      </ul>
-
-      <div class="search-box">
-        <input
-          type="text"
-          class="search__input"
-          placeholder="Search our trip"
-        />
-        <i class="iconfont icon-Search"></i>
-      </div>
-    </div>
-
-    <!-- Article header -->
-    <main>
-      <div class="article-header">
-        <h1 class="article-title">2018 Auckland</h1>
-      </div>
-
-      <!-- Article Content -->
-      <div class="article-content">
-        <img
-          src="./header-content-img--1.jpg"
-          class="content__img"
-          alt="Takapuna"
-        />
-      </div>
-
-      <!-- Article Attribute -->
-      <div class="content-attribute">
-        <div class="image-box">
-          <img
-            src="./IMG_20180818_022023.jpg"
-            class="author-pic"
-            alt="Franky Venus"
-          />
-          <span>by <strong>Venus and Franky</strong> on 2 April 2020</span>
+    <section class="trip-section" id="auckland-section">
+      <div class="auckland-content auckland-content--1">
+        <div class="img-container">
+          <img src="./Image/2018AuckImg/Auckland/dinner.jpg" alt="" />
         </div>
-      </div>
-
-      <!-- Article Footer -->
-      <div class="article-footer">
-        <i class="iconfont icon-comment"></i>
-        <p class="footer-content">
-          Franky Venus love Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Quo necessitatibus perspiciatis dignissimos similique delectus
-          blanditiis, deleniti tempore! Autem labore maiores similique, quod
-          perferendis repudiandae beatae laboriosam<span class="dots">...</span
-          ><span class="more"></span>
-        </p>
-
-        <button type="button" class="read-more">Read more</button>
-      </div>
-    </main>
-
-    <section class="auckland-section--2018" id="auckland-section">
-      <div class="section-header">
-        <h2>Auckland</h2>
-      </div>
-
-      <div class="section-content">
-        <div class="content-block">
-          <div class="image-container materialboxed">
-            <img src="./Image/2018AuckImg/Auckland/dinner.jpg" alt="" />
-          </div>
+        <div class="text-container card-panel">
           <p>
             We had a nice dinner with our friends, Roy and Luna in a seafood
             restaurant located at the Auckland Harbour.
           </p>
         </div>
+      </div>
 
-        <div class="content-block">
-          <div class="image-container materialboxed">
-            <img src="./Image/2018AuckImg/Auckland/img--1.jpg" alt="" />
-          </div>
+      <div class="auckland-content auckland-content--2">
+        <div class="img-container">
+          <img src="./Image/2018AuckImg/Auckland/img--1.jpg" alt="" />
+        </div>
+        <div class="text-container card-panel">
           <p>
             We had Oysters and... the rest are not important, because Oyster is
             Venus' favourite food.
           </p>
         </div>
       </div>
+
+      <!-- <div class="content-block content-block--dual">
+          <div class="image-container materialboxed" id="image-container--2">
+            <img src="./Image/2018AuckImg/Auckland/img--1.jpg" alt="" />
+          </div>
+
+          <div class="text-container">
+            <p>
+              We had Oysters and... the rest are not important, because Oyster
+              is Venus' favourite food.
+            </p>
+          </div>
+        </div>
+      </div> -->
     </section>
 
-    <section class="auckland-section--2018" id="taranga-section">
+    <!-- Taranga -->
+
+    <!-- <section class="trip-section" id="taranga-section">
       <div class="section-header">
         <h2>Taranga</h2>
       </div>
 
       <div class="section-content">
         <div class="content-block">
-          <div class="image-container materialboxed">
+          <div class="image-container materialboxed" id="taranga__img--1">
             <img src="./Image/2018AuckImg/Near Taranga/photo 1.JPG" alt="" />
           </div>
           <p>
@@ -201,7 +166,7 @@
         </div>
 
         <div class="content-block">
-          <div class="image-container materialboxed">
+          <div class="image-container materialboxed" id="taranga__img--2">
             <img
               src="./Image/2018AuckImg/Near Taranga/photo 2.JPG"
               alt=""
@@ -214,7 +179,7 @@
         </div>
 
         <div class="content-block">
-          <div class="image-container materialboxed">
+          <div class="image-container materialboxed" id="taranga__img--3">
             <img src="./Image/2018AuckImg/Near Taranga/image 3.JPG" alt="" />
           </div>
           <p>
@@ -224,7 +189,7 @@
         </div>
 
         <div class="content-block">
-          <div class="image-container materialboxed">
+          <div class="image-container materialboxed" id="taranga__img--4">
             <img src="./Image/2018AuckImg/Near Taranga/image 4.JPG" alt="" />
           </div>
           <p>
@@ -234,9 +199,11 @@
           </p>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="auckland-section--2018" id="rotorua-section">
+    <!-- Rotorua -->
+
+    <!-- <section class="trip-section" id="rotorua-section">
       <div class="section-header">
         <h2>Rotorua</h2>
         <h2>Government Garden</h2>
@@ -244,7 +211,7 @@
 
       <div class="section-content">
         <div class="content-block">
-          <div class="image-container materialboxed">
+          <div class="image-container materialboxed" id="rotorua__img--1">
             <img
               src="./Image/2018AuckImg/Rotorua Government Garden/image 1.JPG"
               alt=""
@@ -263,7 +230,7 @@
         </div>
 
         <div class="content-block">
-          <div class="image-container materialboxed">
+          <div class="image-container materialboxed" id="rotorua__img--2">
             <img
               src="./Image/2018AuckImg/Rotorua Government Garden/image 1.5.JPG"
               alt=""
@@ -277,7 +244,7 @@
         </div>
 
         <div class="content-block">
-          <div class="image-container materialboxed">
+          <div class="image-container materialboxed" id="rotorua__img--3">
             <img
               src="./Image/2018AuckImg/Rotorua Government Garden/image 2.JPG"
               alt=""
@@ -289,7 +256,7 @@
         </div>
 
         <div class="content-block">
-          <div class="image-container materialboxed">
+          <div class="image-container materialboxed" id="rotorua__img--4">
             <img
               src="./Image/2018AuckImg/Rotorua Government Garden/image 3.JPG"
               alt=""
@@ -301,7 +268,7 @@
         </div>
 
         <div class="content-block">
-          <div class="image-container materialboxed">
+          <div class="image-container materialboxed" id="rotorua__img--5">
             <img
               src="./Image/2018AuckImg/Rotorua Government Garden/image 4.JPG"
               alt=""
@@ -312,9 +279,11 @@
           </p>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="auckland-section--2018" id="rotorua-section">
+    <!-- Wia-O -->
+
+    <!-- <section class="trip-section" id="wai-section">
       <div class="section-header">
         <h2>Rotorua</h2>
         <h2>Wai-O-Tapu</h2>
@@ -322,7 +291,7 @@
 
       <div class="section-content">
         <div class="content-block">
-          <div class="image-container materialboxed">
+          <div class="image-container materialboxed" id="wai__img--1">
             <img src="./Image/2018AuckImg/Wai-O-Tapu/Image 1.JPG" alt="" />
           </div>
           <p>
@@ -331,7 +300,7 @@
         </div>
 
         <div class="content-block">
-          <div class="image-container materialboxed">
+          <div class="image-container materialboxed" id="wai__img--2">
             <img
               src="./Image/2018AuckImg/Wai-O-Tapu/Image 3.JPG"
               alt=""
@@ -344,7 +313,7 @@
         </div>
 
         <div class="content-block">
-          <div class="image-container materialboxed">
+          <div class="image-container materialboxed" id="wai__img--3">
             <img src="./Image/2018AuckImg/Wai-O-Tapu/Image 2.JPG" alt="" />
           </div>
           <p>
@@ -354,7 +323,7 @@
         </div>
 
         <div class="content-block">
-          <div class="image-container materialboxed">
+          <div class="image-container materialboxed" id="wai__img--4">
             <img src="./Image/2018AuckImg/Wai-O-Tapu/Image 4.JPG" alt="" />
           </div>
           <p>
@@ -363,7 +332,7 @@
         </div>
 
         <div class="content-block">
-          <div class="image-container materialboxed">
+          <div class="image-container materialboxed" id="wai__img--5">
             <img src="./Image/2018AuckImg/Wai-O-Tapu/Image 5.JPG" alt="" />
           </div>
           <p>
@@ -371,7 +340,7 @@
           </p>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Mobile Carousel - Food Photos -->
     <!-- <div class="carousel-food">
@@ -420,7 +389,7 @@
     <!-- =============== Preloader =============== -->
     <!-- ========================================= -->
 
-    <div class="preloader-page">
+    <!-- <div class="preloader-page">
       <div class="preloader-wrapper big active">
         <div class="spinner-layer spinner-blue-only">
           <div class="circle-clipper left">
@@ -435,6 +404,6 @@
         </div>
       </div>
       <h2>Ready for the journey?</h2>
-    </div>
+    </div> -->
   </body>
 </html>
