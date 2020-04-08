@@ -45,6 +45,7 @@ nav {
 
   .brand-logo {
     color: var(--nav-element-clr);
+    top: -1rem;
 
     img {
       width: var(--nav-logo-width);
@@ -52,6 +53,18 @@ nav {
   }
 
   .nav-items {
+    li {
+      position: relative;
+      &:hover::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 2px;
+        background: black;
+      }
+    }
+
     a {
       color: var(--nav-element-clr);
       font-size: 2rem;
