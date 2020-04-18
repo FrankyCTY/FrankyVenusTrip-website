@@ -1,0 +1,175 @@
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Text Me One', sans-serif;
+// font-family: 'Poor Story', cursive;
+// font-family: 'The Girl Next Door', cursive;
+// font-family: 'Rock Salt', cursive;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+:root {
+  --clr-white: #fff;
+  --clr-black: #000;
+  --clr-gray: #404040;
+
+  --fw--xlight: 200;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --fs-h2: 3.5rem;
+  --fs-big: 2.5rem;
+  --fs-normal: 1.2rem;
+}
+
+// ======================
+// Typography
+// ======================
+
+/* Generic */
+
+h2,
+strong {
+  font-weight: var(--fw-bold);
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.current {
+  border-bottom: 2px solid var(--clr-white);
+  &:hover,
+  &:focus {
+    color: rgba($color: #404040, $alpha: 0.7) !important;
+  }
+}
+
+/* nav */
+.nav-link {
+  text-transform: uppercase;
+  color: rgba($color: #404040, $alpha: 0.7);
+}
+
+/* Auckland2018 - Auckland */
+.section-text--auckland {
+  font-family: "Text Me One", sans-serif;
+  line-height: 1.6;
+}
+
+// ======================
+// Layout
+// ======================
+
+/* Generic */
+.grid-main {
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(0px, 600px)) minmax(
+      1em,
+      1fr
+    );
+}
+
+// ================= Header ====================
+
+/* header - logo */
+.header--auckland2018 {
+}
+
+.header-content--auckland2018 {
+  grid-column: 2 / -2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-link {
+  --size: 4rem;
+  max-width: var(--size);
+  //   height: var(--size);
+}
+
+@media (min-width: 800px) {
+  //   .header-content--auckland2018 {
+  //     justify-content: space-between;
+  //   }
+}
+
+/* header - navigation bar */
+
+.nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 0;
+  width: 100vw;
+  background: pink;
+
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.opened-nav {
+  transform: translateX(100%);
+}
+
+.btn-close-nav {
+  background: 0;
+  border: 0;
+  position: absolute;
+  cursor: pointer;
+  top: 1rem;
+  left: 1rem;
+
+  i {
+    font-size: 3rem;
+    color: rgba($color: #404040, $alpha: 0.7);
+  }
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  margin: 2em;
+}
+
+.nav-link {
+  font-size: 3rem;
+
+  &:hover,
+  &:focus {
+    color: var(--clr-white);
+  }
+}
+
+@media (min-width: 800px) {
+  .nav-item {
+    margin: 2em;
+  }
+}
