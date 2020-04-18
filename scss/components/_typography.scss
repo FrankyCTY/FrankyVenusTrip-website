@@ -1,0 +1,80 @@
+// ======================
+// Typography
+// ======================
+
+:root {
+  --clr-white: #fff;
+  --clr-black: #000;
+  --clr-gray: #404040;
+
+  --clr-nav: pink;
+
+  --fw--xlight: 200;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --fs-h2: 3.5rem;
+  --fs-big: 2.5rem;
+  --fs-normal: 1.2rem;
+}
+
+/* Generic */
+
+h2,
+strong {
+  font-weight: var(--fw-bold);
+}
+
+h2 {
+  font-size: 3.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (min-width: 800px) {
+  h2 {
+    font-size: 4.5rem;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.current {
+  border-bottom: 2px solid var(--clr-white);
+  &:hover,
+  &:focus {
+    color: rgba($color: #404040, $alpha: 0.7) !important;
+  }
+}
+
+/* nav */
+.nav-link {
+  text-transform: uppercase;
+  color: rgba($color: #404040, $alpha: 0.7);
+  font-weight: var(--fw-light);
+}
+
+@media (min-width: 800px) {
+  .nav-link {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+/* Auckland2018 - Auckland */
+.section-text--auckland {
+  font-family: "Text Me One", sans-serif;
+  line-height: 1.6;
+}

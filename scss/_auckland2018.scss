@@ -17,6 +17,8 @@ body {
   --clr-black: #000;
   --clr-gray: #404040;
 
+  --clr-nav: pink;
+
   --fw--xlight: 200;
   --fw-light: 300;
   --fw-regular: 400;
@@ -25,56 +27,6 @@ body {
   --fs-h2: 3.5rem;
   --fs-big: 2.5rem;
   --fs-normal: 1.2rem;
-}
-
-// ======================
-// Typography
-// ======================
-
-/* Generic */
-
-h2,
-strong {
-  font-weight: var(--fw-bold);
-}
-
-h2 {
-  font-size: 3.5rem;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-.current {
-  border-bottom: 2px solid var(--clr-white);
-  &:hover,
-  &:focus {
-    color: rgba($color: #404040, $alpha: 0.7) !important;
-  }
-}
-
-/* nav */
-.nav-link {
-  text-transform: uppercase;
-  color: rgba($color: #404040, $alpha: 0.7);
-}
-
-/* Auckland2018 - Auckland */
-.section-text--auckland {
-  font-family: "Text Me One", sans-serif;
-  line-height: 1.6;
 }
 
 // ======================
@@ -90,16 +42,25 @@ img {
     );
 }
 
-// ================= Header ====================
+// ======================
+// Header
+// ======================
 
 /* header - logo */
+
 .header--auckland2018 {
+  background: rgba($color: #fff, $alpha: 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .header-content--auckland2018 {
   grid-column: 2 / -2;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo-link {
@@ -122,29 +83,13 @@ img {
   bottom: 0;
   left: -100%;
   right: 0;
-  width: 100vw;
-  background: pink;
+  width: 100%;
+  background: var(--clr-nav);
 
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
-}
 
-.opened-nav {
-  transform: translateX(100%);
-}
-
-.btn-close-nav {
-  background: 0;
-  border: 0;
-  position: absolute;
-  cursor: pointer;
-  top: 1rem;
-  left: 1rem;
-
-  i {
-    font-size: 3rem;
-    color: rgba($color: #404040, $alpha: 0.7);
-  }
+  z-index: 100;
 }
 
 .nav-list {
@@ -169,7 +114,164 @@ img {
 }
 
 @media (min-width: 800px) {
-  .nav-item {
-    margin: 2em;
+  .nav {
+    all: unset;
+    position: initial;
   }
+
+  .nav-list {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
+.opened-nav {
+  transform: translateX(100%);
+}
+
+.btn-open-nav {
+  border: 0;
+  background: 0;
+  font-size: 1.5rem;
+  padding: 0.5em 1em;
+  cursor: pointer;
+
+  color: rgba($color: #404040, $alpha: 0.7);
+}
+
+.btn-close-nav {
+  background: 0;
+  border: 0;
+  position: absolute;
+  cursor: pointer;
+  top: 1rem;
+  left: 1rem;
+
+  i {
+    font-size: 3rem;
+    color: rgba($color: #404040, $alpha: 0.7);
+  }
+}
+
+@media (min-width: 800px) {
+  .btn-open-nav,
+  .btn-close-nav {
+    display: none;
+  }
+}
+
+// ======================
+// SECTION GENERIC
+// ======================
+.section-title {
+  color: var(--clr-white);
+}
+
+// ======================
+// Section - Auckland
+// ======================
+.section-view-box {
+  grid-column: 1 / -1;
+  display: grid;
+  place-items: center;
+  padding: 8em 0 4em;
+  background-image: url(../Images/Auckland-section-bg.jpg);
+  background-size: cover;
+  background-position: left;
+}
+
+@media (min-width: 800px) {
+  .section-view-box {
+    padding: 12em 0 8em;
+  }
+}
+
+// ============= section - content -- auckland ==============
+.grid-section-auckland {
+  grid-column: 2 / -2;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr) 3em 3em repeat(6, 1fr);
+  grid-template-rows: 5em repeat(5, 100px) 5em;
+  max-height: 80vh;
+  gap: 0 2em;
+}
+
+.content-auckland-wrapper--1 {
+  grid-column: 1 / 8;
+  grid-row: 2 / span 4;
+}
+
+.content-auckland-wrapper--2 {
+  grid-column: 8 / 15;
+  grid-row: 3 / span 4;
+}
+
+.section-img-auckland--1 {
+  background-image: url(../Images/2018AuckImg/Auckland/img--1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+
+  position: relative;
+}
+
+.section-img-auckland--2 {
+  background-image: url(../Images/2018AuckImg/Auckland/dinner.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+
+  position: relative;
+}
+
+.text-wrapper--1 {
+  background: var(--clr-white);
+  padding: 0 3em;
+  box-shadow: 0 4px 5px -5px rgba($color: #000000, $alpha: 1),
+    inset 0 0 0 10px rgba($color: #fff, $alpha: 1), inset 0 0 0 15px;
+
+  display: grid;
+  place-items: center;
+
+  position: absolute;
+  left: 15%;
+  right: 5%;
+  bottom: 0;
+
+  min-height: 30%;
+
+  transform: translate(0, 50%);
+}
+
+.text-wrapper--2 {
+  background: var(--clr-white);
+  padding: 0 3em;
+  box-shadow: 0 -2px 5px -5px rgba($color: #000000, $alpha: 1),
+    inset 0 0 0 10px rgba($color: #fff, $alpha: 1), inset 0 0 0 15px;
+
+  display: grid;
+  place-items: center;
+
+  position: absolute;
+  left: 5%;
+  right: 20%;
+  top: 0;
+
+  min-height: 30%;
+
+  transform: translate(0, -50%);
+}
+
+.section-text-auckland {
+  font-family: "Text Me One", sans-serif;
+}
+
+.section-text-auckland--1 {
+  //   border: 2px solid rgba($color: #000000, $alpha: 1);
+  //   padding: 2em;
 }
