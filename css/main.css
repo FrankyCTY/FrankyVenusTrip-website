@@ -42,6 +42,8 @@ img {
     color: rgba(64, 64, 64, 0.7) !important; }
 
 .img-vertical {
+  -webkit-perspective: 1000;
+  perspective: 1000;
   -moz-transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
