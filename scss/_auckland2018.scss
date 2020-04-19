@@ -28,8 +28,7 @@ body {
   --fs-big: 2.5rem;
   --fs-normal: 1.2rem;
 
-  --small-gap: 8em;
-  --big-gap: 14em;
+  --small-gap: 12rem;
 }
 
 // ======================
@@ -174,13 +173,7 @@ body {
 
 .section-view-box {
   margin-bottom: var(--small-gap);
-}
-// ======================
-// Section - Auckland
-// ======================
 
-/* view-box */
-.section-view-box {
   grid-column: 1 / -1;
   display: flex;
   justify-content: center;
@@ -191,6 +184,17 @@ body {
   background-position: left;
 }
 
+@media (min-width: 800px) {
+  .section-view-box {
+    background-attachment: fixed;
+  }
+}
+
+// ======================
+// Section - Auckland
+// ======================
+
+/* view-box */
 .section-view-box--auckland {
   background-image: url(../Images/Auckland-section-bg.jpg);
   margin: 0;
@@ -367,6 +371,12 @@ body {
   font-family: "The Girl Next Door", cursive;
   font-size: 1rem;
 
+  margin-bottom: var(--small-gap);
+
+  // @media (min-width: 800px) {
+  //   margin-bottom: var(--big-gap);
+  // }
+
   p {
     font-size: 0.8em;
     margin: 0;
@@ -422,12 +432,6 @@ body {
 }
 
 .taranga-content {
-  // gap: 1em;
-
-  // @media (min-width: 500px) {
-  //   gap: 2em;
-  // }
-
   img {
     --size: 50vw;
     width: var(--size);
@@ -461,4 +465,18 @@ body {
       height: var(--size);
     }
   }
+}
+
+// ===============================================
+// Section - Rotorua
+// ===============================================
+
+/* view box */
+.section-view-box--rotorua {
+  background-image: url(../Images/Rotoura-section-bg.JPG);
+}
+// ======== Content (Rotorua) ===========
+.rotorua-subtitle {
+  font-family: "Rock Salt", cursive;
+  font-size: 3.5em;
 }

@@ -77,8 +77,7 @@ body {
   --fs-h2: 3.5rem;
   --fs-big: 2.5rem;
   --fs-normal: 1.2rem;
-  --small-gap: 8em;
-  --big-gap: 14em; }
+  --small-gap: 12rem; }
 
 /* Generic */
 .grid-main {
@@ -176,10 +175,7 @@ body {
   color: var(--clr-white); }
 
 .section-view-box {
-  margin-bottom: var(--small-gap); }
-
-/* view-box */
-.section-view-box {
+  margin-bottom: var(--small-gap);
   grid-column: 1 / -1;
   display: flex;
   justify-content: center;
@@ -188,6 +184,11 @@ body {
   background-size: cover;
   background-position: left; }
 
+@media (min-width: 800px) {
+  .section-view-box {
+    background-attachment: fixed; } }
+
+/* view-box */
 .section-view-box--auckland {
   background-image: url(../Images/Auckland-section-bg.jpg);
   margin: 0; }
@@ -309,7 +310,8 @@ body {
   flex-direction: column;
   line-height: 1.8;
   font-family: "The Girl Next Door", cursive;
-  font-size: 1rem; }
+  font-size: 1rem;
+  margin-bottom: var(--small-gap); }
   .taranga-content-wrapper p {
     font-size: 0.8em;
     margin: 0; }
@@ -366,3 +368,11 @@ body {
     .taranga-content--2 img {
       width: calc(var(--size) + 10vw);
       height: var(--size); } }
+
+/* view box */
+.section-view-box--rotorua {
+  background-image: url(../Images/Rotoura-section-bg.JPG); }
+
+.rotorua-subtitle {
+  font-family: "Rock Salt", cursive;
+  font-size: 3.5em; }
