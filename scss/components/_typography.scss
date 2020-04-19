@@ -60,6 +60,17 @@ img {
   }
 }
 
+.img-vertical {
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+}
+
+.flex {
+  display: flex;
+}
+
 /* nav */
 .nav-link {
   text-transform: uppercase;
