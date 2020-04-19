@@ -375,4 +375,83 @@ body {
 
 .rotorua-subtitle {
   font-family: "Rock Salt", cursive;
-  font-size: 3.5em; }
+  font-size: 3.5em;
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg); }
+
+.rotorua-content-wrapper {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: var(--fw--xlight); }
+  .rotorua-content-wrapper p {
+    font-size: 1em;
+    text-align: left; }
+  .rotorua-content-wrapper span {
+    font-weight: var(--fw-regular); }
+  .rotorua-content-wrapper .lg {
+    font-size: 1.8em; }
+
+.subgrid-rotorua {
+  grid-column: 2 / -2;
+  display: grid;
+  grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr);
+  align-items: center;
+  grid-template-areas: "subtitle subtitle" "gg1 text1" "text2 gg2" "gg3 gg4" "gg5 text3" "subtitle2 subtitle2" "wai1 text4" "text5 wai2" "wai3 wai4" "wai5 text6";
+  gap: 1em 1em;
+  text-align: center; }
+
+.rotorua-subtitle--1 {
+  grid-area: subtitle; }
+
+.rotorua-subtitle--2 {
+  grid-area: subtitle2; }
+
+.gg-img--1 {
+  grid-area: gg1; }
+
+.gg-img--2 {
+  grid-area: gg2; }
+
+.gg-img--3 {
+  grid-area: gg3; }
+
+.gg-img--4 {
+  grid-area: gg4; }
+
+.gg-img--5 {
+  grid-area: gg5; }
+
+.wai-img--1 {
+  grid-area: wai1; }
+
+.wai-img--2 {
+  grid-area: wai2; }
+
+.wai-img--3 {
+  grid-area: wai3; }
+
+.wai-img--4 {
+  grid-area: wai4; }
+
+.wai-img--5 {
+  grid-area: wai5; }
+
+.gg-text--1 {
+  grid-area: text1; }
+
+.gg-text--2 {
+  grid-area: text2; }
+
+.gg-text--3 {
+  grid-area: text3; }
+
+.wai-text--1 {
+  grid-area: text4; }
+
+.wai-text--2 {
+  grid-area: text5; }
+
+.wai-text--3 {
+  grid-area: text6; }
