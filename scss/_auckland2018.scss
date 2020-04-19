@@ -393,12 +393,40 @@ body {
   }
 }
 
-.taranga-content {
-  gap: 1em;
-
-  @media (min-width: 500px) {
-    gap: 2em;
+.taranga-content--1,
+.taranga-content--3 {
+  p {
+    margin-right: 1em;
   }
+}
+
+.taranga-content--2 {
+  p {
+    margin-left: 1em;
+  }
+}
+
+@media (min-width: 500px) {
+  .taranga-content--1,
+  .taranga-content--3 {
+    p {
+      margin-right: 2em;
+    }
+  }
+
+  .taranga-content--2 {
+    p {
+      margin-left: 2em;
+    }
+  }
+}
+
+.taranga-content {
+  // gap: 1em;
+
+  // @media (min-width: 500px) {
+  //   gap: 2em;
+  // }
 
   img {
     --size: 50vw;
