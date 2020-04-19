@@ -42,10 +42,10 @@ img {
     color: rgba(64, 64, 64, 0.7) !important; }
 
 .img-vertical {
-  transform: rotate(270deg);
-  -webkit-transform: rotate(270deg);
-  -moz-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
   max-width: 100%; }
 
 .flex {
