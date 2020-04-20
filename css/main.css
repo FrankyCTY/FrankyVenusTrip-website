@@ -221,6 +221,8 @@ body {
   --clr-black: #000;
   --clr-gray: #404040;
   --clr-nav: pink;
+  --clr-pink-light: #f0bad3;
+  --clr-pink-dark: #d22e79;
   --fw--xlight: 200;
   --fw-light: 300;
   --fw-regular: 400;
@@ -267,7 +269,7 @@ body {
   left: -100%;
   right: 0;
   width: 100%;
-  background: var(--clr-nav);
+  background-image: linear-gradient(200deg, var(--clr-pink-light), var(--clr-pink-dark));
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
   z-index: 1000; }
