@@ -223,7 +223,10 @@ body {
   grid-column: 1 / -1;
   display: grid;
 
-  grid-template-columns: subgrid;
+  grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(0px, 600px)) minmax(
+      1em,
+      1fr
+    );
   grid-template-rows: 6em repeat(10, 100px) 6em;
 
   gap: 2em 0;
