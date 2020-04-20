@@ -29,6 +29,7 @@ body {
   --fs-normal: 1.2rem;
 
   --small-gap: 12rem;
+  --tiny-gap: 4rem;
 }
 
 // ======================
@@ -172,7 +173,7 @@ body {
 }
 
 .section-view-box {
-  margin-bottom: var(--small-gap);
+  margin-bottom: var(--tiny-gap);
 
   grid-column: 1 / -1;
   display: flex;
@@ -187,6 +188,7 @@ body {
 @media (min-width: 800px) {
   .section-view-box {
     background-attachment: fixed;
+    margin-bottom: var(--small-gap);
   }
 }
 
@@ -371,11 +373,11 @@ body {
   font-family: "The Girl Next Door", cursive;
   font-size: 1rem;
 
-  margin-bottom: var(--small-gap);
+  margin-bottom: var(--tiny-gap);
 
-  // @media (min-width: 800px) {
-  //   margin-bottom: var(--big-gap);
-  // }
+  @media (min-width: 800px) {
+    margin-bottom: var(--small-gap);
+  }
 
   p {
     font-size: 0.8em;

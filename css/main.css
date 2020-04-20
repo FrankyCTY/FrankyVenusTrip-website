@@ -77,7 +77,8 @@ body {
   --fs-h2: 3.5rem;
   --fs-big: 2.5rem;
   --fs-normal: 1.2rem;
-  --small-gap: 12rem; }
+  --small-gap: 12rem;
+  --tiny-gap: 4rem; }
 
 /* Generic */
 .grid-main {
@@ -175,7 +176,7 @@ body {
   color: var(--clr-white); }
 
 .section-view-box {
-  margin-bottom: var(--small-gap);
+  margin-bottom: var(--tiny-gap);
   grid-column: 1 / -1;
   display: flex;
   justify-content: center;
@@ -186,7 +187,8 @@ body {
 
 @media (min-width: 800px) {
   .section-view-box {
-    background-attachment: fixed; } }
+    background-attachment: fixed;
+    margin-bottom: var(--small-gap); } }
 
 /* view-box */
 .section-view-box--auckland {
@@ -311,7 +313,10 @@ body {
   line-height: 1.8;
   font-family: "The Girl Next Door", cursive;
   font-size: 1rem;
-  margin-bottom: var(--small-gap); }
+  margin-bottom: var(--tiny-gap); }
+  @media (min-width: 800px) {
+    .taranga-content-wrapper {
+      margin-bottom: var(--small-gap); } }
   .taranga-content-wrapper p {
     font-size: 0.8em;
     margin: 0; }
