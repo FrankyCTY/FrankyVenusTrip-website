@@ -52,12 +52,19 @@ img {
   display: block;
 }
 
+//================= Customzied typograpthy class ===================
+
 .current {
   border-bottom: 2px solid var(--clr-white);
   &:hover,
   &:focus {
     color: rgba($color: #404040, $alpha: 0.7) !important;
   }
+}
+
+.br,
+.br-sm {
+  display: block;
 }
 
 .flex {
