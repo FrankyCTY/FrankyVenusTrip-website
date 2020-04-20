@@ -12,7 +12,8 @@
     "@fortawesome/fontawesome-free": "^5.13.0",
     "gsap": "^3.2.6",
     "jquery": "^3.4.1",
-    "sass": "^1.26.3"
+    "sass": "^1.26.3",
+    "waypoints": "^4.0.1"
   },
   "devDependencies": {
     "prettier": "2.0.2"

@@ -79,7 +79,11 @@ img {
 .navigation {
   --clr-pink-light: #f0bad3;
   --clr-pink-dark: #d22e79;
-  font-size: 0.6rem; }
+  font-size: 0.6rem;
+  opacity: 0;
+  position: relative;
+  z-index: -10;
+  transition: opacity 200ms ease-in-out; }
   @media (min-width: 600px) {
     .navigation {
       font-size: 0.8rem; } }
@@ -163,11 +167,11 @@ img {
       color: var(--clr-pink-light);
       transform: translateX(0.5em); }
   .navigation__checkbox:checked ~ .navigation__background {
-    -ms-transform: scale(80);
-    -moz-transform: scale(80);
-    -webkit-transform: scale(80);
-    -o-transform: scale(80);
-    transform: scale(80); }
+    -ms-transform: scale(120);
+    -moz-transform: scale(120);
+    -webkit-transform: scale(120);
+    -o-transform: scale(120);
+    transform: scale(120); }
   .navigation__checkbox:checked ~ .navigation__nav {
     transition: opacity 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.3s, transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     opacity: 1;
@@ -200,6 +204,10 @@ img {
   .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
     transform: rotate(-135deg);
     top: 0; }
+
+.show {
+  z-index: initial;
+  opacity: 1; }
 
 * {
   box-sizing: border-box; }
