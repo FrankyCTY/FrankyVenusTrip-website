@@ -375,23 +375,26 @@ body {
 
 .rotorua-subtitle {
   font-family: "Rock Salt", cursive;
-  font-size: 3.5em;
-  -webkit-transform: rotate(-20deg);
-  -moz-transform: rotate(-20deg);
-  -ms-transform: rotate(-20deg);
-  transform: rotate(-20deg); }
+  font-size: 2em; }
+  @media (min-width: 800px) {
+    .rotorua-subtitle {
+      -webkit-transform: rotate(-20deg);
+      -moz-transform: rotate(-20deg);
+      -ms-transform: rotate(-20deg);
+      transform: rotate(-20deg); } }
 
 .rotorua-content-wrapper {
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   font-weight: var(--fw--xlight); }
   .rotorua-content-wrapper p {
-    font-size: 1em;
-    text-align: left; }
+    font-size: 0.8em;
+    text-align: left;
+    line-height: 1.6; }
   .rotorua-content-wrapper span {
     font-weight: var(--fw-regular); }
   .rotorua-content-wrapper .lg {
-    font-size: 1.8em; }
+    font-size: 1.5em; }
 
 .subgrid-rotorua {
   grid-column: 2 / -2;

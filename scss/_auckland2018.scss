@@ -478,12 +478,14 @@ body {
 // ======== Content (Rotorua) ===========
 .rotorua-subtitle {
   font-family: "Rock Salt", cursive;
-  font-size: 3.5em;
+  font-size: 2em;
 
-  -webkit-transform: rotate(-20deg);
-  -moz-transform: rotate(-20deg);
-  -ms-transform: rotate(-20deg);
-  transform: rotate(-20deg);
+  @media (min-width: 800px) {
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
 }
 
 .rotorua-content-wrapper {
@@ -493,8 +495,9 @@ body {
   font-weight: var(--fw--xlight);
 
   p {
-    font-size: 1em;
+    font-size: 0.8em;
     text-align: left;
+    line-height: 1.6;
   }
 
   span {
@@ -502,7 +505,7 @@ body {
   }
 
   .lg {
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
 }
 
