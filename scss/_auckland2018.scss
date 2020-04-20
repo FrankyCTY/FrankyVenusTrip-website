@@ -65,8 +65,13 @@ body {
 .header-content--auckland2018 {
   grid-column: 2 / -2;
   display: flex;
-  justify-items: space-between;
+  justify-content: center;
   align-items: center;
+
+  @media (min-width: 800px) {
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .logo-link {
@@ -78,6 +83,35 @@ body {
   .logo-link {
     --size: 4rem;
     max-width: var(--size);
+  }
+}
+
+/* nav */
+
+.nav {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .nav {
+    display: initial;
+  }
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-item {
+    margin: 0 1em;
+  }
+  .nav-link {
+    font-size: 1rem;
+    color: rgba($color: #404040, $alpha: 0.7);
+
+    &:hover,
+    &:focus {
+      color: var(--clr-white);
+    }
   }
 }
 
