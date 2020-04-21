@@ -4,14 +4,15 @@
   "description": "",
   "main": "myJs.js",
   "scripts": {
-    "watch:scss": "node-sass ./scss/mix.scss ./css/main.css -w"
+    "watch:scss": "node-sass ./scss/mix.scss ./css/main.css -w",
+    "build": "postcss css/tailwind.css -o public/build/tailwind.css"
   },
   "author": "Franky Venusd",
   "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
-    "gsap": "^3.2.6",
+    "autoprefixer": "^9.7.6",
     "jquery": "^3.4.1",
+    "postcss-cli": "^7.1.0",
     "sass": "^1.26.3",
     "waypoints": "^4.0.1"
   },

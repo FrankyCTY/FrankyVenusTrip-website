@@ -40,7 +40,7 @@
 
     cursor: pointer;
 
-    box-shadow: 0 1em 3em rgba($color: #000000, $alpha: 0.1);
+    box-shadow: 2px 3px 10px 2px rgba($color: #000000, $alpha: 0.1);
 
     display: grid;
     place-items: center;
@@ -133,7 +133,7 @@
     );
 
     transition: all 250ms ease-in-out;
-    background-size: 220%;
+    background-size: 250%;
 
     &:hover,
     &:focus {

@@ -1,0 +1,12 @@
+// ======================
+// Layout
+// ======================
+
+/* Generic */
+.grid-main {
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(0px, 600px)) minmax(
+        1em,
+        1fr
+      );
+  }

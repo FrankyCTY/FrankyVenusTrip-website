@@ -18,6 +18,8 @@ body {
   --clr-black: #000;
   --clr-gray: #404040;
 
+  --clr-blue-light: ##5dbcd2;
+
   --clr-nav: pink;
   --clr-pink-light: #f0bad3;
   --clr-pink-dark: #d22e79;
@@ -39,14 +41,6 @@ body {
 // Layout
 // ======================
 
-/* Generic */
-.grid-main {
-  display: grid;
-  grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(0px, 600px)) minmax(
-      1em,
-      1fr
-    );
-}
 
 // ======================
 // Header
@@ -505,6 +499,8 @@ body {
 
   align-items: center;
   justify-items: center;
+
+  margin-bottom: var(--small-gap);
 
   grid-template-areas:
     "subtitle subtitle"

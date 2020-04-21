@@ -9,10 +9,16 @@
     <!-- myJs -->
     <script src="js/myJs.js" defer></script>
 
-    <!-- font-awesome -->
+    <!-- Google font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poor+Story&family=Poppins:wght@200;300;400;700&family=Rock+Salt&family=Text+Me+One&family=The+Girl+Next+Door&display=swap"
       rel="stylesheet"
+    />
+
+    <!-- iconfont -->
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/font_1734371_q64rg76zhxr.css"
     />
 
     <!-- jquery -->
@@ -29,6 +35,7 @@
 
     <title>Franky and Venus' Site</title>
   </head>
+
   <body>
     <!-- _nav.scss -->
     <div class="navigation">
@@ -47,21 +54,13 @@
       <div class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>01</span>About Natous</a>
+            <a href="./main.html" class="navigation__link">Home</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>02</span>Your benfits</a>
+            <a href="#" class="navigation__link">Our story</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link"
-              ><span>03</span>Popular tours</a
-            >
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>04</span>Stories</a>
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>05</span>Book now</a>
+            <a href="#" class="navigation__link">Contact</a>
           </li>
         </ul>
       </div>
@@ -80,7 +79,9 @@
 
         <nav class="nav">
           <ul class="nav-list">
-            <li class="nav-item"><a href="#" class="nav-link">home</a></li>
+            <li class="nav-item">
+              <a href="main.html" class="nav-link">home</a>
+            </li>
             <li class="nav-item">
               <a href="#" class="nav-link current">our story</a>
             </li>
@@ -270,7 +271,44 @@
       </section>
     </main>
 
-    <footer class="footer footer--auckland2018"></footer>
+    <footer class="footer grid-main">
+      <div class="footer-logo-box">
+        <img
+          src="./FrankyVenus logo--transparent.png"
+          alt="Franky and Venus' logo that a fish on the left and a sheep on the right"
+          class="footer-logo"
+        />
+        <p class="footer-text">The journey of Franky and Venus.</p>
+        <p class="footer-email">
+          <a href="frankytakyuwork@gmail.com">frankytakyuwork@gmail.com</a>
+        </p>
+        <p class="footer-right">
+          © 2020 Tak Yu Chan | All rights reserved
+        </p>
+      </div>
+
+      <div class="footer-info-box">
+        <ul class="footer-list flex">
+          <li class="footer-item">
+            <a href="https://www.facebook.com/takyu.chan.9" class="footer-link"
+              ><i class="iconfont iconfacebookfacebook52"></i
+            ></a>
+          </li>
+          <li class="footer-item">
+            <a
+              href="https://www.linkedin.com/in/tak-yu-chan-18b51518b/"
+              class="footer-link"
+              ><i class="iconfont iconlinkedin"></i
+            ></a>
+          </li>
+          <li class="footer-item">
+            <a href="https://github.com/TakYuChan" class="footer-link"
+              ><i class="iconfont icongithub"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
     <!-- <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 
