@@ -1,0 +1,39 @@
+// ======================
+// Header
+// ======================
+
+/* header - logo */
+
+.header {
+  background: rgba($color: #fff, $alpha: 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  // box-shadow: 0 1px 20px rgba($color: #000000, $alpha: 0.2);
+}
+
+.header-content {
+  grid-column: 2 / -2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 800px) {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo-link {
+  --size: 2.5rem;
+  max-width: var(--size);
+}
+
+@media (min-width: 800px) {
+  .logo-link {
+    --size: 4rem;
+    max-width: var(--size);
+  }
+}

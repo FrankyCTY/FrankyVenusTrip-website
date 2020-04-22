@@ -18,7 +18,9 @@ body {
   --clr-black: #000;
   --clr-gray: #404040;
 
-  --clr-blue-light: ##5dbcd2;
+  --clr-background: #e8eef2;
+
+  --clr-blue-light: #5dbcd2;
 
   --clr-nav: pink;
   --clr-pink-light: #f0bad3;
@@ -40,45 +42,6 @@ body {
 // ======================
 // Layout
 // ======================
-
-
-// ======================
-// Header
-// ======================
-
-/* header - logo */
-
-.header--auckland2018 {
-  background: rgba($color: #fff, $alpha: 0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.header-content--auckland2018 {
-  grid-column: 2 / -2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media (min-width: 800px) {
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-.logo-link {
-  --size: 2.5rem;
-  max-width: var(--size);
-}
-
-@media (min-width: 800px) {
-  .logo-link {
-    --size: 4rem;
-    max-width: var(--size);
-  }
-}
 
 /* nav */
 
@@ -144,6 +107,8 @@ body {
 .section-view-box--auckland {
   background-image: url(../Images/Auckland-section-bg.jpg);
   margin: 0;
+
+  background-attachment: initial;
 }
 
 @media (min-width: 800px) {
