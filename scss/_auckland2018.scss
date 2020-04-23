@@ -11,6 +11,8 @@
 body {
   margin: 0;
   background: var(--clr-background);
+
+  user-select: none;
 }
 
 .body--index {
@@ -31,10 +33,6 @@ body {
   --clr-background: #e8eef2;
 
   --clr-blue-light: #5dbcd2;
-
-  --clr-nav: pink;
-  --clr-pink-light: #f0bad3;
-  --clr-pink-dark: #d22e79;
 
   --fw--xlight: 200;
   --fw-light: 300;

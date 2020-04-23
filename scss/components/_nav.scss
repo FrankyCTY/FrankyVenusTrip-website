@@ -1,6 +1,8 @@
 .navigation {
-  --clr-pink-light: #f0bad3;
-  --clr-pink-dark: #d22e79;
+  --clr-navlink: #fff;
+  --effect-navlink: #6e6e6e;
+  --clr-nav-light: #eee;
+  --clr-nav-dark: #ccc;
 
   font-size: 0.6rem;
 
@@ -69,8 +71,8 @@
     width: var(--size);
     height: var(--size);
     background-image: radial-gradient(
-      var(--clr-pink-light),
-      var(--clr-pink-dark)
+      var(--clr-nav-light),
+      var(--clr-nav-dark)
     );
     border-radius: 50%;
 
@@ -120,12 +122,13 @@
     display: inline-block;
     padding: 0.5em 1em;
 
+    font-family: "Poppins", sans-serif;
+
     font-size: 2em;
     font-weight: var(--fw-regular);
     text-transform: uppercase;
-    color: rgba($color: #404040, $alpha: 0.7);
+    color: rgba($color: var(--clr-navlink), $alpha: 1);
 
-    // border: 2px solid magenta;
     background-image: linear-gradient(
       120deg,
       transparent 0%,
@@ -139,7 +142,6 @@
     &:hover,
     &:focus {
       background-position: 100%;
-      color: var(--clr-pink-light);
       transform: translateX(0.5em);
     }
   }
@@ -228,6 +230,10 @@ html[data-theme="dark"] {
   @extend %onscreen-clr;
   //Navigation
   .navigation {
+    --clr-nav-light: #111;
+    --clr-nav-dark: #3b3b3b;
+    --clr-navlink: #fdfeff;
+
     &__button {
       &,
       &::after {
@@ -241,6 +247,17 @@ html[data-theme="dark"] {
       &::before {
         background: var(--clr-btn-white);
       }
+    }
+
+    &__link {
+      color: var(--clr-navlink);
+
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        var(--effect-navlink) 50%
+      );
     }
   }
 }

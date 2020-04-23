@@ -164,8 +164,10 @@ html[data-theme="dark"] {
 }
 
 .navigation {
-  --clr-pink-light: #f0bad3;
-  --clr-pink-dark: #d22e79;
+  --clr-navlink: #fff;
+  --effect-navlink: #6e6e6e;
+  --clr-nav-light: #eee;
+  --clr-nav-dark: #ccc;
   font-size: 0.6rem;
   position: relative;
 }
@@ -231,7 +233,7 @@ html[data-theme="dark"] {
   --size: 3em;
   width: var(--size);
   height: var(--size);
-  background-image: radial-gradient(var(--clr-pink-light), var(--clr-pink-dark));
+  background-image: radial-gradient(var(--clr-nav-light), var(--clr-nav-dark));
   border-radius: 50%;
   position: fixed;
   top: 13.5em;
@@ -275,10 +277,11 @@ html[data-theme="dark"] {
 .navigation__link {
   display: inline-block;
   padding: 0.5em 1em;
+  font-family: "Poppins", sans-serif;
   font-size: 2em;
   font-weight: var(--fw-regular);
   text-transform: uppercase;
-  color: rgba(64, 64, 64, 0.7);
+  color: rgba(var(--clr-navlink), 1);
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
@@ -287,7 +290,6 @@ html[data-theme="dark"] {
 
 .navigation__link:hover, .navigation__link:focus {
   background-position: 100%;
-  color: var(--clr-pink-light);
   -webkit-transform: translateX(0.5em);
           transform: translateX(0.5em);
 }
@@ -363,12 +365,23 @@ html[data-theme="dark"] {
   opacity: 1;
 }
 
+html[data-theme="dark"] .navigation {
+  --clr-nav-light: #111;
+  --clr-nav-dark: #3b3b3b;
+  --clr-navlink: #fdfeff;
+}
+
 html[data-theme="dark"] .navigation__button, html[data-theme="dark"] .navigation__button::after {
   background-color: var(--clr-btn-dark);
 }
 
 html[data-theme="dark"] .navigation__icon, html[data-theme="dark"] .navigation__icon::after, html[data-theme="dark"] .navigation__icon::before {
   background: var(--clr-btn-white);
+}
+
+html[data-theme="dark"] .navigation__link {
+  color: var(--clr-navlink);
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--effect-navlink) 50%);
 }
 
 .theme__checkbox {
@@ -929,6 +942,10 @@ html.transition * {
 body {
   margin: 0;
   background: var(--clr-background);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .body--index {
@@ -952,9 +969,6 @@ body {
   --clr-gray: #404040;
   --clr-background: #e8eef2;
   --clr-blue-light: #5dbcd2;
-  --clr-nav: pink;
-  --clr-pink-light: #f0bad3;
-  --clr-pink-dark: #d22e79;
   --fw--xlight: 200;
   --fw-light: 300;
   --fw-regular: 400;
