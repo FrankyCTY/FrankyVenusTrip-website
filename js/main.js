@@ -15,7 +15,7 @@ $(document).ready(function () {
     hero,
     1,
     { height: "0%" },
-    { height: "80vh", ease: Power2.easeInOut }
+    { height: "80%", ease: Power2.easeInOut }
   ).fromTo(
     slider,
     1,
@@ -39,6 +39,20 @@ $(document).ready(function () {
       1.5,
       { opacity: 0, x: 30 },
       { opacity: 1, x: 0, ease: Power2.easeInOut },
+      "-=1.5"
+    )
+    .fromTo(
+      logo,
+      1.5,
+      {
+        opacity: 0,
+        x: 30,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        ease: Power2.easeInOut,
+      },
       "-=1.5"
     );
 });
