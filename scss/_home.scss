@@ -40,11 +40,15 @@ html.transition * {
 
 .body--home {
   margin: 0;
+  padding: 0;
   font-size: 0.6rem;
 
-  background: #424d40;
-  overflow: hidden;
-  max-height: 100vh;
+  min-height: 100vh;
+
+  background: var(--home-bg);
+
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: 500px) {
     font-size: 0.8rem;
@@ -83,6 +87,8 @@ html.transition * {
 // Header
 // ===========================
 .header--main {
+  flex-basis: 10vh;
+
   position: initial;
   background: transparent;
 
@@ -94,36 +100,22 @@ html.transition * {
   .nav-link:focus {
     color: var(--clr-blue);
   }
-
-  @media (min-midth: 800px) {
-    position: absolute;
-  }
 }
 
 // ==========================
 // Main
 // ===========================
 .main-home {
+  flex-grow: 1;
+
   font-family: "Poppins", sans-serif;
   margin: 0;
 
-  min-height: 100vh;
-
-  // border: 2px solid black;
-
-  place-items: center;
-
-  @media (min-midth: 800px) {
-    place-items: center;
-  }
-
   .hero {
     grid-column: 1 / -1;
-    transform: translateY(-10%);
 
     display: grid;
     grid-template-columns: 10% minmax(0px, 40%) minmax(0px, 40%) 10%;
-    align-items: flex-end;
 
     position: relative;
 
@@ -137,20 +129,17 @@ html.transition * {
 
     background-position: 0% 60%;
 
-    // border: 2px solid black;
-
-    height: 80%; //Check main.js
+    height: 80vh; //Check main.js
     width: 100%;
-
-    @media (min-width: 800px) {
-      // height: 60%;
-    }
   }
 
   // ================== Text Box ===================
 
   .text-box {
-    grid-column: 2 / -1;
+    // border: 2px solid red;
+    grid-column: 2 / span 2;
+
+    align-self: flex-end;
 
     color: var(--clr-white);
     font-size: 1.5em;
@@ -175,7 +164,7 @@ html.transition * {
 
   .btn-wrapper {
     transform: translateY(-3em);
-    grid-column: 2 / -1;
+    grid-column: 2;
     align-self: center;
     justify-self: start;
 
@@ -355,7 +344,3 @@ html.transition * {
 
   z-index: -1;
 }
-
-// ======================
-// DARK MODE
-// ======================
