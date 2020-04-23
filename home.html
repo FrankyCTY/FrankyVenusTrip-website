@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- main css -->
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./scss/mix.css" />
 
-    <!-- myJs -->
+    <!-- main.js -->
     <script src="js/main.js" defer></script>
+
+    <!-- general.js -->
+    <script src="js/general.js" defer></script>
 
     <!-- Google font -->
     <link
@@ -32,21 +35,34 @@
     <!-- iconfont -->
     <link
       rel="stylesheet"
-      href="//at.alicdn.com/t/font_1734371_im1jardg4fb.css"
+      href="//at.alicdn.com/t/font_1734371_82bp39g0rfv.css"
     />
     <title>Document</title>
   </head>
   <body class="body--home">
+    <!-- =============== Theme Toggle ============== -->
+    <div class="theme">
+      <input type="checkbox" class="theme__checkbox" id="theme-toggle" />
+      <label
+        arial-label="button to switch theme from light to dark, vice versa"
+        for="theme-toggle"
+        class="theme-toggle onscreen"
+        ><span class="theme__icon"
+          ><i class="iconfont iconthemelightdark"></i></span
+      ></label>
+    </div>
+
+    <!-- ============== Header ================ -->
     <header class="header header--main grid-home">
       <div class="header-content">
-        <a href="#" class="logo-link">
+        <a href="./home.html" class="logo-link">
           <img
             src="./FrankyVenus logo--transparent.png"
             alt="Franky and Venus' logo that a fish on the left and a sheep on the right"
             class="logo-img"
           />
         </a>
-
+        <!-- ================== Nav ===================== -->
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-item">
@@ -60,7 +76,7 @@
         </nav>
       </div>
     </header>
-
+    <!-- ==================== Main and hero ================= -->
     <main class="main-home grid-home">
       <div class="hero grid">
         <div class="text-box">

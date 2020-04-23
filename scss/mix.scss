@@ -2,9 +2,13 @@
 @import "./components/btn";
 @import "./layouts/grid";
 
+@import "./sass/mixins";
+@import "./sass/placeholder";
+
 @import "./sections/header";
 @import "./components/bg";
 @import "./components/nav";
+@import "./components/onscreen";
 
 @import "./sections/footer";
 

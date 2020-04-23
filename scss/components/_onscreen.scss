@@ -1,0 +1,76 @@
+%onscreen {
+  --clr-btn-dark: #222;
+}
+
+.onscreen {
+  --size: 4em;
+
+  &,
+  &::after {
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: var(--clr-white);
+  }
+
+  top: 7em;
+  right: 2em;
+
+  z-index: 200;
+  position: fixed;
+
+  cursor: pointer;
+
+  box-shadow: 2px 3px 10px 2px rgba($color: #000000, $alpha: 0.1);
+
+  display: grid;
+  place-items: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+
+    transition: all 250ms;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+// ==========================
+// Theme-button
+// ==========================
+.theme__checkbox {
+  display: none;
+}
+
+.theme-toggle {
+  transition: all 400ms ease-in-out;
+
+  animation: fadein 1.5s;
+}
+
+.theme__icon {
+  .iconthemelightdark {
+    font-size: 2.5em;
+  }
+}
+
+// ========= Animation ===========
+@keyframes fadein {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}

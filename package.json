@@ -4,8 +4,7 @@
   "description": "",
   "main": "myJs.js",
   "scripts": {
-    "watch:scss": "node-sass ./scss/mix.scss ./css/main.css -w",
-    "build": "postcss css/tailwind.css -o public/build/tailwind.css"
+    "watch:scss": "node-sass ./scss/mix.scss ./scss/mix.css -w"
   },
   "author": "Franky Venusd",
   "license": "ISC",

@@ -40,12 +40,5 @@ $(document).ready(function () {
       { opacity: 0, x: 30 },
       { opacity: 1, x: 0, ease: Power2.easeInOut },
       "-=1.5"
-    )
-    .fromTo(
-      logo,
-      1.5,
-      { autoAlpha: 0, x: 30 },
-      { autoAlpha: 1, x: 0, ease: Power2.easeInOut },
-      "-=1.5"
     );
 });
