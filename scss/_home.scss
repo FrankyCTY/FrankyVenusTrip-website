@@ -34,7 +34,7 @@ html[data-theme="dark"] {
 //DARK MODE Transition
 html.transition,
 html.transition * {
-  transition: all 750ms !important;
+  transition: all 750ms;
   transition-delay: 0 !important;
 }
 

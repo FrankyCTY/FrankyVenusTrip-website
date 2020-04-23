@@ -570,8 +570,8 @@ html[data-theme="dark"] .theme-toggle .iconthemelightdark {
 
 html.transition,
 html.transition * {
-  -webkit-transition: all 750ms !important;
-  transition: all 750ms !important;
+  -webkit-transition: all 750ms;
+  transition: all 750ms;
   -webkit-transition-delay: 0 !important;
           transition-delay: 0 !important;
 }
