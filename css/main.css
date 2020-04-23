@@ -325,7 +325,8 @@ img {
   --clr-white: #fdfeff;
   font-size: 0.6rem;
   background: #424d40;
-  overflow: hidden; }
+  overflow: hidden;
+  max-height: 100vh; }
   @media (min-width: 500px) {
     .body--home {
       font-size: 0.8rem; } }

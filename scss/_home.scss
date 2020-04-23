@@ -10,6 +10,7 @@
 
   background: #424d40;
   overflow: hidden;
+  max-height: 100vh;
 
   @media (min-width: 500px) {
     font-size: 0.8rem;
@@ -75,7 +76,6 @@
 
   .hero {
     grid-column: 1 / -1;
-    // overflow: hidden;
     transform: translateY(-10%);
 
     display: grid;
