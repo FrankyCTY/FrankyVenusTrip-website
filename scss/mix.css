@@ -579,7 +579,7 @@ html.transition * {
   margin: 0;
   padding: 0;
   font-size: 0.6rem;
-  min-height: 100vh;
+  max-height: 100vh;
   background: var(--home-bg);
   display: -webkit-box;
   display: -ms-flexbox;
