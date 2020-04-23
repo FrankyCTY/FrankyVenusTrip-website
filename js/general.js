@@ -17,6 +17,7 @@ $(document).ready(() => {
       trans();
       document.documentElement.setAttribute("data-theme", "dark");
       localStorage.setItem("theme", "dark");
+      console.log("thanks for clicking!!!!!!");
     } else {
       trans();
       document.documentElement.setAttribute("data-theme", "light");

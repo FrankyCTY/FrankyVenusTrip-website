@@ -6,10 +6,12 @@ html {
   --clr-link: var(--clr-black);
 }
 
-html[data-theme="dark"] {
-  @extend %onscreen;
+//========== DARK MODE ===========
 
-  --clr-background: #111;
+html[data-theme="dark"] {
+  @extend %onscreen-clr;
+
+  --clr-background: var(--clr-black);
 
   --clr-link: var(--clr-white);
 
@@ -23,10 +25,11 @@ html[data-theme="dark"] {
   }
 
   .theme-toggle .iconthemelightdark {
-    color: var(--clr-white);
+    color: var(--clr-btn-white);
   }
 }
 
+//DARK MODE Transition
 html.transition,
 html.transition * {
   transition: all 750ms !important;
@@ -63,6 +66,15 @@ html.transition * {
       10%,
       1fr
     );
+}
+
+// ==========================
+// Theme button
+// ==========================
+
+.onscreen--home {
+  @include onscreen;
+  top: 7em;
 }
 
 // ==========================

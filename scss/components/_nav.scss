@@ -9,7 +9,7 @@
   @media (min-width: 600px) {
     font-size: 0.8rem;
     opacity: 0;
-    z-index: -10;
+    // z-index: -10;
     transition: opacity 200ms ease-in-out;
   }
 
@@ -30,9 +30,10 @@
       height: var(--size);
       border-radius: 50%;
       background-color: var(--clr-white);
+      // background: black;
     }
 
-    top: 7em;
+    top: 13em;
     right: 2em;
 
     z-index: 200;
@@ -74,7 +75,7 @@
     border-radius: 50%;
 
     position: fixed;
-    top: 7.5em;
+    top: 13.5em;
     right: 2.5em;
 
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -214,8 +215,32 @@
   }
 }
 
-// Navigation waypoint
+// ============= Navigation waypoint =============
 .show {
   z-index: initial;
   opacity: 1;
+}
+
+// ============================
+// DARK MODE
+// ============================
+html[data-theme="dark"] {
+  @extend %onscreen-clr;
+  //Navigation
+  .navigation {
+    &__button {
+      &,
+      &::after {
+        background-color: var(--clr-btn-dark);
+      }
+    }
+
+    &__icon {
+      &,
+      &::after,
+      &::before {
+        background: var(--clr-btn-white);
+      }
+    }
+  }
 }

@@ -10,12 +10,22 @@
 
 body {
   margin: 0;
-  background: #e8eef2;
+  background: var(--clr-background);
+}
+
+.body--index {
+  font-size: 0.6rem;
+  @media (min-width: 600px) {
+    font-size: 0.8rem;
+  }
+
+  @media (min-width: 800px) {
+    font-size: 1rem;
+  }
 }
 
 :root {
-  --clr-white: #fff;
-  --clr-black: #000;
+  --clr-white: #fdfeff;
   --clr-gray: #404040;
 
   --clr-background: #e8eef2;
@@ -38,6 +48,27 @@ body {
   --small-gap: 12rem;
   --mid-gap: 8rem;
   --tiny-gap: 4rem;
+}
+
+//================== DARK MODE ===================
+html[data-theme="dark"] {
+  .body--index {
+    --clr-background: var(--clr-black);
+
+    p,
+    h2 {
+      color: var(--clr-white);
+    }
+
+    //Edge Case
+    .section-text-auckland {
+      color: initial;
+    }
+  }
+
+  .logo-link--index {
+    filter: invert(0);
+  }
 }
 
 // ======================
@@ -71,6 +102,14 @@ body {
       color: var(--clr-white);
     }
   }
+}
+
+// ==================
+// Theme button
+// ==================
+.onscreen--index {
+  @include onscreen;
+  top: 7em;
 }
 
 // ======================

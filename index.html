@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- main css -->
+    <!-- mix css -->
     <link rel="stylesheet" href="./scss/mix.css" />
+
+    <!-- jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"
+    ></script>
+
     <!-- myJs -->
     <script src="js/myJs.js" defer></script>
+
+    <!-- general css -->
+    <script src="./js/general.js"></script>
 
     <!-- Google font -->
     <link
@@ -20,28 +31,22 @@
       href="//at.alicdn.com/t/font_1734371_q64rg76zhxr.css"
     />
 
-    <!-- jquery -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
-      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
-      crossorigin="anonymous"
-    ></script>
-
     <!-- waypoints -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 
     <!-- iconfont -->
     <link
       rel="stylesheet"
-      href="//at.alicdn.com/t/font_1734371_im1jardg4fb.css"
+      href="//at.alicdn.com/t/font_1734371_82bp39g0rfv.css"
     />
 
     <title>Franky and Venus' Site</title>
   </head>
 
-  <body>
+  <body class="body--index">
     <!-- _nav.scss -->
     <div class="navigation">
+      <!-- Nav btn and icon -->
       <input type="checkbox" class="navigation__checkbox" id="nav_toggle" />
       <label
         arial-label="button to open navigation list"
@@ -54,6 +59,7 @@
         &nbsp;
       </div>
 
+      <!-- Nav floating list -->
       <div class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
@@ -69,10 +75,22 @@
       </div>
     </div>
 
+    <!-- =============== Theme Toggle ============== -->
+    <div class="theme">
+      <input type="checkbox" class="theme__checkbox" id="theme-toggle" />
+      <label
+        arial-label="button to switch theme from light to dark, vice versa"
+        for="theme-toggle"
+        class="theme-toggle onscreen onscreen--index"
+        ><span class="theme__icon"
+          ><i class="iconfont iconthemelightdark"></i></span
+      ></label>
+    </div>
+
     <!-- Header -->
     <header class="header grid-main">
       <div class="header-content">
-        <a href="./home.html" class="logo-link">
+        <a href="./home.html" class="logo-link logo-link--index">
           <img
             src="./FrankyVenus logo--transparent.png"
             alt="Franky and Venus' logo that a fish on the left and a sheep on the right"

@@ -1,4 +1,4 @@
-.onscreen {
+@mixin onscreen {
   --size: 4em;
 
   &,
@@ -9,7 +9,7 @@
     background-color: var(--clr-white);
   }
 
-  top: 7em;
+  top: 13em;
   right: 2em;
 
   z-index: 200;
@@ -69,4 +69,11 @@
   to {
     transform: scale(1);
   }
+}
+
+//================================
+// Variation
+//================================
+.onscreen--index {
+  top: 11em;
 }
