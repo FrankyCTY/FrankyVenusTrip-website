@@ -544,6 +544,7 @@ html {
   --clr-blue: #008dfd;
   --clr-background: #e8eef2;
   --clr-white: #fdfeff;
+  --home-bg: #424d40;
   --clr-link: var(--clr-black);
 }
 
