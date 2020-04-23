@@ -34,6 +34,10 @@
 
   display: grid;
   place-items: center;
+
+  @media (min-width: 1200px) {
+    place-items: initial;
+  }
 }
 
 .footer-logo {
