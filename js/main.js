@@ -15,7 +15,7 @@ $(document).ready(function () {
     hero,
     1,
     { height: "0%" },
-    { height: "60%", ease: Power2.easeInOut }
+    { height: "80%", ease: Power2.easeInOut }
   ).fromTo(
     slider,
     1,

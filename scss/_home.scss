@@ -9,6 +9,7 @@
   font-size: 0.6rem;
 
   background: #424d40;
+  overflow: hidden;
 
   @media (min-width: 500px) {
     font-size: 0.8rem;
@@ -38,7 +39,7 @@
 // Header
 // ===========================
 .header--main {
-  //   position: initial;
+  position: initial;
   background: transparent;
 
   .nav-link {
@@ -48,6 +49,10 @@
   .nav-link:hover,
   .nav-link:focus {
     color: var(--clr-blue);
+  }
+
+  @media (min-midth: 800px) {
+    position: absolute;
   }
 }
 
@@ -60,10 +65,18 @@
 
   min-height: 100vh;
 
+  // border: 2px solid black;
+
   place-items: center;
+
+  @media (min-midth: 800px) {
+    place-items: center;
+  }
 
   .hero {
     grid-column: 1 / -1;
+    // overflow: hidden;
+    transform: translateY(-10%);
 
     display: grid;
     grid-template-columns: 10% minmax(0px, 40%) minmax(0px, 40%) 10%;
@@ -81,8 +94,14 @@
 
     background-position: 0% 60%;
 
-    height: 60vh;
+    // border: 2px solid black;
+
+    height: 80%; //Check main.js
     width: 100%;
+
+    @media (min-width: 800px) {
+      // height: 60%;
+    }
   }
 
   // ================== Text Box ===================
@@ -94,7 +113,11 @@
     font-size: 1.5em;
     letter-spacing: 1px;
 
-    margin-top: 4em;
+    transform: translateY(4em);
+
+    @media (min-width: 800px) {
+      transform: translateY(0);
+    }
   }
 
   .hero__title {
@@ -108,6 +131,7 @@
   //   ============== Button ================
 
   .btn-wrapper {
+    transform: translateY(-3em);
     grid-column: 2 / -1;
     align-self: center;
     justify-self: start;
@@ -282,7 +306,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background: var(--clr-background);
 

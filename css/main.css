@@ -324,7 +324,8 @@ img {
   --clr-background: #e8eef2;
   --clr-white: #fdfeff;
   font-size: 0.6rem;
-  background: #424d40; }
+  background: #424d40;
+  overflow: hidden; }
   @media (min-width: 500px) {
     .body--home {
       font-size: 0.8rem; } }
@@ -340,20 +341,28 @@ img {
   grid-template-columns: minmax(10%, 1fr) minmax(0px, 700px) minmax(0px, 700px) minmax(10%, 1fr); }
 
 .header--main {
+  position: initial;
   background: transparent; }
   .header--main .nav-link {
     color: var(--clr-black); }
   .header--main .nav-link:hover,
   .header--main .nav-link:focus {
     color: var(--clr-blue); }
+  @media (min-midth: 800px) {
+    .header--main {
+      position: absolute; } }
 
 .main-home {
   font-family: "Poppins", sans-serif;
   margin: 0;
   min-height: 100vh;
   place-items: center; }
+  @media (min-midth: 800px) {
+    .main-home {
+      place-items: center; } }
   .main-home .hero {
     grid-column: 1 / -1;
+    transform: translateY(-10%);
     display: grid;
     grid-template-columns: 10% minmax(0px, 40%) minmax(0px, 40%) 10%;
     align-items: flex-end;
@@ -361,19 +370,23 @@ img {
     background-image: linear-gradient(to bottom, rgba(1, 1, 1, 0), rgba(1, 1, 1, 0)), url(../Images/Home/home-bg-min.JPG);
     background-size: cover;
     background-position: 0% 60%;
-    height: 60vh;
+    height: 80%;
     width: 100%; }
   .main-home .text-box {
     grid-column: 2 / -1;
     color: var(--clr-white);
     font-size: 1.5em;
     letter-spacing: 1px;
-    margin-top: 4em; }
+    transform: translateY(4em); }
+    @media (min-width: 800px) {
+      .main-home .text-box {
+        transform: translateY(0); } }
   .main-home .hero__title {
     margin: 0; }
   .main-home .hero__subtitle {
     margin: 0; }
   .main-home .btn-wrapper {
+    transform: translateY(-3em);
     grid-column: 2 / -1;
     align-self: center;
     justify-self: start;
@@ -480,7 +493,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background: var(--clr-background);
   z-index: -1; }
