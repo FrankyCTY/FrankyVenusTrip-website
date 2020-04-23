@@ -822,7 +822,7 @@ html.transition * {
   content: "";
   position: absolute;
   display: block;
-  top: -15%;
+  top: -10%;
   left: -50%;
   width: 200%;
   height: 200%;
