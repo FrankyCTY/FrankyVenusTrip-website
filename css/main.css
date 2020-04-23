@@ -523,6 +523,7 @@ body {
   --fs-big: 2.5rem;
   --fs-normal: 1.2rem;
   --small-gap: 12rem;
+  --mid-gap: 8rem;
   --tiny-gap: 4rem; }
 
 /* nav */
@@ -751,6 +752,12 @@ body {
       width: calc(var(--size) + 10vw);
       height: var(--size); } }
 
+.section-rotorua {
+  margin-bottom: var(--mid-gap); }
+  @media (min-width: 800px) {
+    .section-rotorua {
+      margin-bottom: var(--small-gap); } }
+
 /* view box */
 .section-view-box--rotorua {
   background-image: url(../Images/Rotoura-section-bg.JPG); }
@@ -793,13 +800,21 @@ body {
       -ms-transform: rotate(-20deg);
       transform: rotate(-20deg); } }
 
+.rotorua-subtitle--2 {
+  margin-top: var(--tiny-gap); }
+  @media (min-width: 500px) {
+    .rotorua-subtitle--2 {
+      margin-top: var(--mid-gap); } }
+  @media (min-width: 800px) {
+    .rotorua-subtitle--2 {
+      margin-top: 0; } }
+
 .subgrid-rotorua {
   grid-column: 2 / -2;
   display: grid;
   grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr);
   align-items: center;
   justify-items: center;
-  margin-bottom: var(--small-gap);
   grid-template-areas: "subtitle subtitle" "gg1 text1" "text2 gg2" "gg3 gg4" "gg5 text3" "subtitle2 subtitle2" "wai1 text4" "text5 wai2" "wai3 wai4" "wai5 text6";
   gap: 1em 1em;
   text-align: center; }

@@ -36,6 +36,7 @@ body {
   --fs-normal: 1.2rem;
 
   --small-gap: 12rem;
+  --mid-gap: 8rem;
   --tiny-gap: 4rem;
 }
 
@@ -391,6 +392,14 @@ body {
 // Section - Rotorua
 // ===============================================
 
+.section-rotorua {
+  margin-bottom: var(--mid-gap);
+
+  @media (min-width: 800px) {
+    margin-bottom: var(--small-gap);
+  }
+}
+
 /* view box */
 .section-view-box--rotorua {
   background-image: url(../Images/Rotoura-section-bg.JPG);
@@ -444,6 +453,8 @@ body {
   }
 }
 
+// =========== rotorua subtitle ================
+
 .rotorua-subtitle {
   font-family: "Rock Salt", cursive;
   font-size: 1.8em;
@@ -456,6 +467,20 @@ body {
   }
 }
 
+.rotorua-subtitle--2 {
+  margin-top: var(--tiny-gap);
+
+  @media (min-width: 500px) {
+    margin-top: var(--mid-gap);
+  }
+
+  @media (min-width: 800px) {
+    margin-top: 0;
+  }
+}
+
+// ===================== subgrid rotorua ====================
+
 .subgrid-rotorua {
   grid-column: 2 / -2;
 
@@ -464,8 +489,6 @@ body {
 
   align-items: center;
   justify-items: center;
-
-  margin-bottom: var(--small-gap);
 
   grid-template-areas:
     "subtitle subtitle"
