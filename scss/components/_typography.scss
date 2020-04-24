@@ -2,15 +2,14 @@
 // Typography
 // ======================
 
-:root {
+html {
   --clr-white: #fdfeff;
   --clr-black: #111;
   --clr-gray: #404040;
 
+  --clr-blue: #008dfd;
   --clr-blue-light: #5dbcd2;
-  --clr-background: #e8eef2;
 
-  --clr-nav: pink;
   --clr-pink-light: #f0bad3;
   --clr-pink-dark: #d22e79;
 
@@ -23,8 +22,11 @@
   --fs-big: 2.5rem;
   --fs-normal: 1.2rem;
 
-  --small-gap: 12rem;
-  --tiny-gap: 4rem;
+  --small-gap: 8rem;
+  --tiny-gap: 3rem;
+  --mid-gap: 4rem;
+
+  --clr-background: #e8eef2;
 }
 /* Generic */
 
@@ -60,14 +62,6 @@ img {
 }
 
 //================= Customzied typograpthy class ===================
-
-.current {
-  border-bottom: 2px solid var(--clr-white);
-  &:hover,
-  &:focus {
-    color: rgba($color: #404040, $alpha: 0.7) !important;
-  }
-}
 
 .br,
 .br-sm {

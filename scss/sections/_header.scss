@@ -33,6 +33,14 @@
   max-width: var(--size);
 }
 
+.current {
+  border-bottom: 2px solid var(--clr-white);
+  &:hover,
+  &:focus {
+    color: rgba($color: var(--clr-black), $alpha: 0.7) !important;
+  }
+}
+
 @media (min-width: 800px) {
   .logo-link {
     --size: 4rem;

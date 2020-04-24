@@ -1,4 +1,6 @@
-@mixin onscreen {
+.onscreen {
+  --clr-btn-dark: #222;
+  --clr-btn-white: #fdfeff;
   --size: 4em;
 
   &,

@@ -11,12 +11,13 @@
 body {
   margin: 0;
   padding: 0;
-  background: var(--clr-background);
 
   user-select: none;
 }
 
 .body--index {
+  background: var(--clr-background);
+
   font-size: 0.6rem;
   @media (min-width: 600px) {
     font-size: 0.8rem;
@@ -25,28 +26,6 @@ body {
   @media (min-width: 800px) {
     font-size: 1rem;
   }
-}
-
-:root {
-  --clr-white: #fdfeff;
-  --clr-gray: #404040;
-
-  --clr-background: #e8eef2;
-
-  --clr-blue-light: #5dbcd2;
-
-  --fw--xlight: 200;
-  --fw-light: 300;
-  --fw-regular: 400;
-  --fw-bold: 700;
-
-  --fs-h2: 3.5rem;
-  --fs-big: 2.5rem;
-  --fs-normal: 1.2rem;
-
-  --small-gap: 12rem;
-  --mid-gap: 8rem;
-  --tiny-gap: 4rem;
 }
 
 //================== DARK MODE ===================
@@ -107,7 +86,6 @@ html[data-theme="dark"] {
 // Theme button
 // ==================
 .onscreen--index {
-  @include onscreen;
   top: 7em;
 }
 
@@ -160,10 +138,29 @@ html[data-theme="dark"] {
   }
 }
 
+//Section title - Auckland
+.section-title--auckland {
+  margin-top: 2em;
+}
+
 // ======== Content (Auckland) ===========
 
 .section-content--auckland {
   position: relative;
+
+  font-size: 1.6em;
+
+  @media (min-width: 800px) {
+    font-size: 0.8em;
+  }
+
+  @media (min-width: 900px) {
+    font-size: 0.9em;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 1em;
+  }
 }
 
 .subgrid--auckland {
@@ -503,6 +500,10 @@ html[data-theme="dark"] {
     -ms-transform: rotate(-20deg);
     transform: rotate(-20deg);
   }
+}
+
+.rotorua-subtitle--1 {
+  margin-top: 0;
 }
 
 .rotorua-subtitle--2 {

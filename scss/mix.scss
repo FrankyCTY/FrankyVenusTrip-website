@@ -1,16 +1,16 @@
 @import "./components/typography";
 @import "./components/btn";
 @import "./layouts/grid";
-
 @import "./sass/mixins";
 @import "./sass/placeholder";
-
-@import "./sections/header";
 @import "./components/bg";
 @import "./components/nav";
 @import "./components/onscreen";
 
+@import "./transitions/darkmode";
+
 @import "./sections/footer";
+@import "./sections/header";
 
 @import "./home";
 @import "./auckland2018";

@@ -1,21 +1,14 @@
 html {
-  --clr-blue: #008dfd;
-  --clr-background: #e8eef2;
-  --clr-white: #fdfeff;
-
-  --home-bg: #424d40;
-
-  --clr-link: var(--clr-black);
 }
 
 //========== DARK MODE ===========
 
 html[data-theme="dark"] {
-  @extend %onscreen-clr;
+  .body--home {
+    --clr-slider: var(--clr-black);
 
-  --clr-background: var(--clr-black);
-
-  --clr-link: var(--clr-white);
+    --clr-link: var(--clr-white);
+  }
 
   .logo-link {
     filter: invert(1);
@@ -34,7 +27,7 @@ html[data-theme="dark"] {
 //DARK MODE Transition
 html.transition,
 html.transition * {
-  transition: all 750ms;
+  transition: all 250ms !important;
   transition-delay: 0 !important;
 }
 
@@ -46,6 +39,12 @@ html.transition * {
   height: 100vh;
 
   overflow: hidden;
+
+  --home-bg: #424d40;
+
+  --clr-link: var(--clr-black);
+
+  --clr-slider: var(--clr-background);
 
   background: var(--home-bg);
 
@@ -78,7 +77,6 @@ html.transition * {
 // ==========================
 
 .onscreen--home {
-  @include onscreen;
   top: 7em;
 }
 
@@ -338,7 +336,7 @@ html.transition * {
   left: 0;
   height: 100vh;
   width: 100%;
-  background: var(--clr-background);
+  background: var(--clr-slider);
 
   z-index: -1;
 }
