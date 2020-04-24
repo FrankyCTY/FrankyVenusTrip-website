@@ -113,6 +113,7 @@ html[data-theme="dark"] {
   .section-view-box {
     background-attachment: fixed;
     margin-bottom: var(--small-gap);
+    padding: 3em 0 2em;
   }
 }
 
@@ -129,10 +130,6 @@ html[data-theme="dark"] {
 }
 
 @media (min-width: 800px) {
-  .section-view-box {
-    padding: 3em 0 2em;
-  }
-
   .section-view-box--auckland {
     padding: 12em 0 8em;
   }
