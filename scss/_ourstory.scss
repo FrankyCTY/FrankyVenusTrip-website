@@ -1,0 +1,45 @@
+.body--ourstory {
+  background: var(--clr-background);
+
+  font-size: 0.6rem;
+  @media (min-width: 600px) {
+    font-size: 0.8rem;
+  }
+
+  @media (min-width: 800px) {
+    font-size: 1rem;
+  }
+}
+
+//========== DARK MODE ===========
+
+html[data-theme="dark"] {
+  .body--ourstory {
+    --clr-slider: var(--clr-black);
+
+    --clr-link: var(--clr-white);
+  }
+
+  .logo-link--ourstory {
+    filter: invert(1);
+  }
+}
+
+// ==========================
+// Header
+// ===========================
+.header--ourstory {
+  position: static;
+  background: transparent;
+
+  min-height: 10vh;
+
+  .nav-link {
+    color: var(--clr-link);
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    color: var(--clr-blue);
+  }
+}

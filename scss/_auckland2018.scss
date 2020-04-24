@@ -147,11 +147,11 @@ html[data-theme="dark"] {
 
   font-size: 1.6em;
 
-  @media (min-width: 800px) {
-    font-size: 0.8em;
+  @media (min-width: 600px) {
+    font-size: 1.2em;
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
     font-size: 0.9em;
   }
 

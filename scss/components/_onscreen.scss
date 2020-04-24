@@ -79,3 +79,17 @@
 .onscreen--index {
   top: 11em;
 }
+
+//================================
+// DARK MODE
+//================================
+html[data-theme="dark"] {
+  .theme-toggle,
+  .theme-toggle::after {
+    background: var(--clr-btn-dark);
+  }
+
+  .theme-toggle .iconthemelightdark {
+    color: var(--clr-btn-white);
+  }
+}

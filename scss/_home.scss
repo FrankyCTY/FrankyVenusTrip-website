@@ -1,6 +1,3 @@
-html {
-}
-
 //========== DARK MODE ===========
 
 html[data-theme="dark"] {
@@ -10,17 +7,8 @@ html[data-theme="dark"] {
     --clr-link: var(--clr-white);
   }
 
-  .logo-link {
+  .logo-link--home {
     filter: invert(1);
-  }
-
-  .theme-toggle,
-  .theme-toggle::after {
-    background: var(--clr-btn-dark);
-  }
-
-  .theme-toggle .iconthemelightdark {
-    color: var(--clr-btn-white);
   }
 }
 
@@ -83,7 +71,7 @@ html.transition * {
 // ==========================
 // Header
 // ===========================
-.header--main {
+.header--home {
   position: static;
   background: transparent;
 
