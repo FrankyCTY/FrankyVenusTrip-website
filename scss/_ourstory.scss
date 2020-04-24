@@ -38,15 +38,17 @@ html[data-theme="dark"] {
 .grid--ourstory {
   display: grid;
 
-  grid-template-columns:
-    minmax(1em, 1fr) minmax(0px, 300px)
-    minmax(1em, 1fr);
+  // grid-template-columns:
+  //   minmax(1em, 1fr) minmax(0px, 300px)
+  //   minmax(1em, 1fr);
 
   align-content: center;
 
-  @media (min-width: 800px) {
-    grid-template-columns: minmax(1em, 1fr) repeat(13, 1fr) minmax(1em, 1fr);
-  }
+  // @media (min-width: 800px) {
+  grid-template-columns:
+    minmax(1em, 1fr) minmax(0px, 400px) minmax(2em, 1fr)
+    minmax(0px, 400px) minmax(2em, 1fr) minmax(0px, 400px) minmax(1em, 1fr);
+  // }
 }
 
 // ===========================
@@ -68,15 +70,18 @@ html[data-theme="dark"] {
   }
 }
 
-// ===========================
-// Main--ourstory
-// ===========================
+// ===============================================
+// ================ Main--ourstory ===============
+// ===============================================
 .main--ourstory {
   min-height: 90vh;
   position: relative;
 }
 
-// =============== Video bg ====================
+// ===========================
+// Video bg
+// ===========================
+
 .video--ourstory {
   position: absolute;
   top: 0;
@@ -94,17 +99,31 @@ html[data-theme="dark"] {
   }
 }
 
-// =============== cards GENERAL====================
+// ===========================
+// Card
+// ===========================
 
 .card {
   --clr-card-content: #e8eef2;
   --clr-card-txt: var(--clr-blue-light);
-  height: 50vh;
+  height: 32em;
   position: relative;
 
   perspective: 150rem;
 
-  // cursor: pointer;
+  font-size: 0.6em;
+
+  @media (min-width: 700px) {
+    font-size: 0.9em;
+  }
+
+  @media (min-width: 800px) {
+    font-size: 0.8em;
+  }
+
+  @media (min-width: 850px) {
+    font-size: 1em;
+  }
 
   &:hover,
   &:focus {
@@ -265,16 +284,16 @@ html[data-theme="dark"] {
 .card--3 {
 }
 
-@media (min-width: 800px) {
-  .card--1 {
-    grid-column: 3 / span 3;
-  }
-
-  .card--2 {
-    grid-column: 7 / span 3;
-  }
-
-  .card--3 {
-    grid-column: 11 / span 3;
-  }
+// @media (min-width: 800px) {
+.card--1 {
+  grid-column: 2;
 }
+
+.card--2 {
+  grid-column: 4;
+}
+
+.card--3 {
+  grid-column: 6;
+}
+// }
