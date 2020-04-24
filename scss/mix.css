@@ -967,8 +967,17 @@ html[data-theme="dark"] .logo-link--ourstory {
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
-  -ms-grid-columns: minmax(1em, 1fr) minmax(0px, 400px) minmax(2em, 1fr) minmax(0px, 400px) minmax(2em, 1fr) minmax(0px, 400px) minmax(1em, 1fr);
-      grid-template-columns: minmax(1em, 1fr) minmax(0px, 400px) minmax(2em, 1fr) minmax(0px, 400px) minmax(2em, 1fr) minmax(0px, 400px) minmax(1em, 1fr);
+  -ms-grid-columns: minmax(3em, 1fr) minmax(0px, 400px) minmax(3em, 1fr);
+      grid-template-columns: minmax(3em, 1fr) minmax(0px, 400px) minmax(3em, 1fr);
+  gap: 5em 0;
+}
+
+@media (min-width: 800px) {
+  .grid--ourstory {
+    -ms-grid-columns: minmax(1em, 1fr) minmax(0px, 400px) minmax(2em, 1fr) minmax(0px, 400px) minmax(2em, 1fr) minmax(0px, 400px) minmax(1em, 1fr);
+        grid-template-columns: minmax(1em, 1fr) minmax(0px, 400px) minmax(2em, 1fr) minmax(0px, 400px) minmax(2em, 1fr) minmax(0px, 400px) minmax(1em, 1fr);
+    gap: 0;
+  }
 }
 
 .header--ourstory {
@@ -989,6 +998,7 @@ html[data-theme="dark"] .logo-link--ourstory {
 .main--ourstory {
   min-height: 90vh;
   position: relative;
+  padding: 5em 0;
 }
 
 .video--ourstory {
@@ -1012,27 +1022,29 @@ html[data-theme="dark"] .logo-link--ourstory {
 .card {
   --clr-card-content: #e8eef2;
   --clr-card-txt: var(--clr-blue-light);
-  height: 32em;
+  height: 35rem;
   position: relative;
   -webkit-perspective: 150rem;
           perspective: 150rem;
-  font-size: 0.6em;
+  font-size: 1.6em;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   .card {
-    font-size: 0.9em;
+    font-size: 1.3em;
   }
 }
 
 @media (min-width: 800px) {
   .card {
+    height: 30rem;
     font-size: 0.8em;
   }
 }
 
 @media (min-width: 850px) {
   .card {
+    height: 32rem;
     font-size: 1em;
   }
 }
@@ -1065,6 +1077,16 @@ html[data-theme="dark"] .logo-link--ourstory {
   background-position: center;
   background: var(--clr-white);
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .cardside--front__header {
@@ -1098,7 +1120,7 @@ html[data-theme="dark"] .logo-link--ourstory {
 .card__details {
   width: 80%;
   text-align: center;
-  margin: 0 auto;
+  margin: auto auto;
 }
 
 .card__item {
@@ -1163,6 +1185,25 @@ html[data-theme="dark"] .logo-link--ourstory {
   letter-spacing: 1px;
 }
 
+@media (min-width: 600px) {
+  .card__btn a {
+    font-size: 1.2em;
+    padding: 0.6em 1.3em;
+  }
+}
+
+@media (min-width: 800px) {
+  .card__btn a {
+    font-size: 1.5em;
+    padding: 0.8em 1.6em;
+  }
+}
+
+.card--1 {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
 .card--1 .cardside--front__header {
   background-image: linear-gradient(120deg, rgba(161, 196, 253, 0.2) 0%, rgba(194, 233, 251, 0.2) 100%), url(../Images/ourstory/ourstory-nz.jpg);
 }
@@ -1171,19 +1212,29 @@ html[data-theme="dark"] .logo-link--ourstory {
   background: var(--clr-card-content);
 }
 
-.card--1 {
+.card--2 {
   -ms-grid-column: 2;
   grid-column: 2;
 }
 
-.card--2 {
-  -ms-grid-column: 4;
-  grid-column: 4;
+.card--3 {
+  -ms-grid-column: 2;
+  grid-column: 2;
 }
 
-.card--3 {
-  -ms-grid-column: 6;
-  grid-column: 6;
+@media (min-width: 800px) {
+  .card--1 {
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  .card--2 {
+    -ms-grid-column: 4;
+    grid-column: 4;
+  }
+  .card--3 {
+    -ms-grid-column: 6;
+    grid-column: 6;
+  }
 }
 
 * {
