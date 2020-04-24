@@ -1,5 +1,26 @@
+//========== DARK MODE ===========
+
+html[data-theme="dark"] {
+  .body--ourstory {
+    background: var(--clr-black);
+
+    --clr-link: var(--clr-white);
+  }
+
+  .logo-link--ourstory {
+    filter: invert(1);
+  }
+}
+
+// ===========================
+// Body
+// ===========================
+
 .body--ourstory {
   background: var(--clr-background);
+  // overflow: hidden;
+
+  font-family: "Poppins", sans-serif;
 
   font-size: 0.6rem;
   @media (min-width: 600px) {
@@ -11,22 +32,25 @@
   }
 }
 
-//========== DARK MODE ===========
+// ===========================
+// Layout
+// ===========================
+.grid--ourstory {
+  display: grid;
 
-html[data-theme="dark"] {
-  .body--ourstory {
-    --clr-slider: var(--clr-black);
+  grid-template-columns:
+    minmax(1em, 1fr) minmax(0px, 300px)
+    minmax(1em, 1fr);
 
-    --clr-link: var(--clr-white);
-  }
+  align-content: center;
 
-  .logo-link--ourstory {
-    filter: invert(1);
+  @media (min-width: 800px) {
+    grid-template-columns: minmax(1em, 1fr) repeat(13, 1fr) minmax(1em, 1fr);
   }
 }
 
-// ==========================
-// Header
+// ===========================
+// Header--ourstory
 // ===========================
 .header--ourstory {
   position: static;
@@ -41,5 +65,216 @@ html[data-theme="dark"] {
   .nav-link:hover,
   .nav-link:focus {
     color: var(--clr-blue);
+  }
+}
+
+// ===========================
+// Main--ourstory
+// ===========================
+.main--ourstory {
+  min-height: 90vh;
+  position: relative;
+}
+
+// =============== Video bg ====================
+.video--ourstory {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.6;
+  overflow: hidden;
+
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+// =============== cards GENERAL====================
+
+.card {
+  --clr-card-content: #e8eef2;
+  --clr-card-txt: var(--clr-blue-light);
+  height: 50vh;
+  position: relative;
+
+  perspective: 150rem;
+
+  // cursor: pointer;
+
+  &:hover,
+  &:focus {
+    .cardside--front {
+      transform: rotateY(180deg);
+    }
+
+    .cardside--back {
+      transform: rotateY(0deg);
+    }
+  }
+}
+
+.cardside {
+  backface-visibility: hidden;
+  overflow: hidden;
+
+  box-shadow: 2px 5px 5px 5px rgba($color: #000000, $alpha: 0.3);
+
+  transition: transform 0.8s ease;
+}
+
+// ============== Cardside - FRONT layout =================
+
+.cardside--front {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+
+  background: var(--clr-white);
+
+  position: relative;
+}
+
+.cardside--front__header {
+  height: 60%;
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0%, 100% 78%, 0 100%);
+}
+
+// ======== Card - title ==========
+.card-title {
+  font-size: 1.5em;
+  color: var(--clr-card-txt);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 60%;
+  margin: 0;
+
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  text-align: right;
+}
+
+.card-title__span {
+  box-decoration-break: clone;
+  background: rgba($color: #000000, $alpha: 0.5);
+  padding: 0.1em 0.5em;
+}
+
+// ======== Card - Details ==========
+
+.card__details {
+  width: 80%;
+  text-align: center;
+
+  margin: 0 auto;
+}
+
+.card__item {
+  padding: 0.5em 0;
+
+  font-weight: var(--fw-light);
+  letter-spacing: 0.8px;
+  color: var(--clr-gray);
+  border-bottom: 1px solid var(--clr-blue-light);
+}
+
+// ============== Cardside - BACK layout =================
+
+.cardside--back {
+  height: 100%;
+
+  //back side is rotated already.
+  transform: rotateY(180deg);
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  align-items: center;
+}
+
+.card__intro {
+  border: 2px solid;
+  width: 80%;
+
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 30%;
+
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  background-clip: text;
+
+  color: transparent;
+  line-height: 2;
+
+  text-shadow: 0 8px 6px rgba($color: #000000, $alpha: 0.2);
+}
+
+.card__btn {
+  background: 0;
+  outline: 0;
+  border: 0;
+  text-transform: uppercase;
+
+  background: var(--clr-white);
+  border-radius: 50px;
+
+  a {
+    display: inline-block;
+    color: var(--clr-gray);
+    font-size: 1.5em;
+    padding: 0.8em 1.6em;
+    letter-spacing: 1px;
+  }
+}
+
+// ============== Cardside - SPECIFIC CARD =================
+
+.card--1 {
+  .cardside--front {
+    &__header {
+      background-image: linear-gradient(
+          120deg,
+          rgba(#a1c4fd, 0.2) 0%,
+          rgba(#c2e9fb, 0.2) 100%
+        ),
+        url(../Images/ourstory/ourstory-nz.jpg);
+    }
+  }
+  .cardside--back {
+    background: var(--clr-card-content);
+  }
+}
+
+.card--2 {
+}
+
+.card--3 {
+}
+
+@media (min-width: 800px) {
+  .card--1 {
+    grid-column: 3 / span 3;
+  }
+
+  .card--2 {
+    grid-column: 7 / span 3;
+  }
+
+  .card--3 {
+    grid-column: 11 / span 3;
   }
 }
