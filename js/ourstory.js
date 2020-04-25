@@ -60,15 +60,15 @@ $(document).ready(function () {
   const card2 = document.querySelector(".card--2");
   const card3 = document.querySelector(".card--3");
 
-  card.addEventListener("click", function () {
+  card1.addEventListener("touchstart", function () {
     card1.classList.toggle("flipped");
   });
 
-  card2.addEventListener("click", function () {
+  card2.addEventListener("touchstart", function () {
     card2.classList.toggle("flipped");
   });
 
-  card3.addEventListener("click", function () {
+  card3.addEventListener("touchstart", function () {
     card3.classList.toggle("flipped");
   });
 });
