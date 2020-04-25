@@ -60,53 +60,7 @@ $(document).ready(function () {
 
   const tl2 = new TimelineMax();
 
-  const card_fliped = false;
-
-  card1.addEventListener("touchstart", function () {
-    if (card_fliped === false) {
-      tl2.fromTo(
-        cardside1,
-        0.5,
-        { rotationY: 0 },
-        { rotationY: "180deg", ease: Power2.easeInOut }
-      );
-    }
-    //     .fromTo(
-    //       cardside_back,
-    //       0.5,
-    //       {
-    //         rotationY: "180deg",
-    //       },
-    //       {
-    //         rotationY: 0,
-    //         ease: Power2.ease,
-    //       },
-    //       "-=.5"
-    //     );
-
-    //   card_fliped = true;
-    // } else {
-    //   tl2
-    //     .fromTo(
-    //       cardside_front,
-    //       0.5,
-    //       { rotationY: "180deg" },
-    //       { rotationY: "0deg", ease: Power2.easeInOut }
-    //     )
-    //     .fromTo(
-    //       cardside_back,
-    //       0.5,
-    //       {
-    //         rotationY: "0deg",
-    //       },
-    //       {
-    //         rotationY: "180deg",
-    //         ease: Power2.ease,
-    //       },
-    //       "-=.5"
-    //     );
-
-    //   card_fliped = false;
-    // }
+  card.addEventListener("touchstart", function () {
+    card.classList.toggle("flipped");
   });
 });

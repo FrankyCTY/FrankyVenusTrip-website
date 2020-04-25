@@ -34,6 +34,22 @@
   }
 }
 
+// =====================
+// Touch Flipped Event
+// =====================
+
+.flipped {
+  transition: transform 0.8s ease;
+  .cardside--front {
+    transform: rotateY(180deg);
+  }
+
+  .cardside--back {
+    transform: rotateY(0deg);
+  }
+}
+
+// ================== Card side ================
 .cardside {
   backface-visibility: hidden;
   overflow: hidden;

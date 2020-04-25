@@ -309,6 +309,13 @@ html[data-theme="dark"] .theme-toggle .iconthemelightdark {
   .card:hover .cardside--back, .card:focus .cardside--back {
     transform: rotateY(0deg); }
 
+.flipped {
+  transition: transform 0.8s ease; }
+  .flipped .cardside--front {
+    transform: rotateY(180deg); }
+  .flipped .cardside--back {
+    transform: rotateY(0deg); }
+
 .cardside {
   backface-visibility: hidden;
   overflow: hidden;
