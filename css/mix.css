@@ -294,6 +294,7 @@ html[data-theme="dark"] .theme-toggle .iconthemelightdark {
   --clr-card-txt: var(--clr-blue-light);
   height: 30rem;
   position: relative;
+  -webkit-perspective: 150rem;
   perspective: 150rem;
   font-size: 1rem; }
   @media (min-width: 800px) {
@@ -305,22 +306,33 @@ html[data-theme="dark"] .theme-toggle .iconthemelightdark {
       height: 32rem;
       font-size: 1rem; } }
   .card:hover .cardside--front, .card:focus .cardside--front {
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg); }
   .card:hover .cardside--back, .card:focus .cardside--back {
+    -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg); }
 
 .flipped {
-  transition: transform 0.8s ease; }
+  -webkit-transition: -webkit-transform 0.8s ease;
+  transition: -webkit-transform 0.8s ease;
+  transition: transform 0.8s ease;
+  transition: transform 0.8s ease, -webkit-transform 0.8s ease; }
   .flipped .cardside--front {
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg); }
   .flipped .cardside--back {
+    -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg); }
 
 .cardside {
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: hidden;
   box-shadow: 2px 5px 5px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transition: -webkit-transform 0.8s ease;
+  transition: -webkit-transform 0.8s ease;
   transition: transform 0.8s ease;
+  transition: transform 0.8s ease, -webkit-transform 0.8s ease;
   border-radius: 2px; }
 
 .cardside--front {
@@ -329,14 +341,19 @@ html[data-theme="dark"] .theme-toggle .iconthemelightdark {
   background-position: center;
   background: var(--clr-white);
   position: relative;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
+  -webkit-box-pack: justify;
   justify-content: space-between; }
 
 .cardside--front__header {
   height: 60%;
   background-size: cover;
   background-position: center;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 78%, 0 100%);
   clip-path: polygon(0 0, 100% 0%, 100% 78%, 0 100%); }
 
 .card-title {
@@ -352,6 +369,7 @@ html[data-theme="dark"] .theme-toggle .iconthemelightdark {
   text-align: right; }
 
 .card-title__span {
+  -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   background: rgba(0, 0, 0, 0.5);
   padding: 0.1em 0.5em; }
@@ -370,15 +388,20 @@ html[data-theme="dark"] .theme-toggle .iconthemelightdark {
 
 .cardside--back {
   height: 100%;
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
   justify-content: space-around;
+  -webkit-box-align: center;
   align-items: center; }
 
 .card__intro {
@@ -387,7 +410,9 @@ html[data-theme="dark"] .theme-toggle .iconthemelightdark {
   font-size: 1.5em;
   text-align: center;
   margin-top: 30%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#4facfe), to(#00f2fe));
   background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   line-height: 2;

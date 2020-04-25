@@ -8,6 +8,8 @@
   height: 30rem;
   position: relative;
 
+  -webkit-perspective: 150rem;
+
   perspective: 150rem;
 
   font-size: 1rem;
@@ -25,10 +27,12 @@
   &:hover,
   &:focus {
     .cardside--front {
+      -webkit-transform: rotateY(180deg);
       transform: rotateY(180deg);
     }
 
     .cardside--back {
+      -webkit-transform: rotateY(0deg);
       transform: rotateY(0deg);
     }
   }
@@ -39,24 +43,36 @@
 // =====================
 
 .flipped {
+  -webkit-transition: -webkit-transform 0.8s ease;
+  transition: -webkit-transform 0.8s ease;
   transition: transform 0.8s ease;
+  transition: transform 0.8s ease, -webkit-transform 0.8s ease;
   .cardside--front {
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
   }
 
   .cardside--back {
+    -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
   }
 }
 
 // ================== Card side ================
 .cardside {
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: hidden;
 
   box-shadow: 2px 5px 5px 5px rgba($color: #000000, $alpha: 0.3);
 
+  -webkit-transition: -webkit-transform 0.8s ease;
+
+  transition: -webkit-transform 0.8s ease;
+
   transition: transform 0.8s ease;
+
+  transition: transform 0.8s ease, -webkit-transform 0.8s ease;
 
   border-radius: 2px;
 }
@@ -72,8 +88,14 @@
 
   position: relative;
 
+  display: -webkit-box;
+
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
+
+  -webkit-box-pack: justify;
 
   justify-content: space-between;
 }
@@ -82,6 +104,7 @@
   height: 60%;
   background-size: cover;
   background-position: center;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 78%, 0 100%);
   clip-path: polygon(0 0, 100% 0%, 100% 78%, 0 100%);
 }
 
@@ -101,6 +124,7 @@
 }
 
 .card-title__span {
+  -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   background: rgba($color: #000000, $alpha: 0.5);
   padding: 0.1em 0.5em;
@@ -130,6 +154,7 @@
   height: 100%;
 
   //back side is rotated already.
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 
   position: absolute;
@@ -138,9 +163,15 @@
   left: 0;
   right: 0;
 
+  display: -webkit-box;
+
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
   justify-content: space-around;
+
+  -webkit-box-align: center;
 
   align-items: center;
 }
@@ -153,7 +184,16 @@
   text-align: center;
   margin-top: 30%;
 
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#4facfe),
+    to(#00f2fe)
+  );
+
   background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  -webkit-background-clip: text;
   background-clip: text;
 
   color: transparent;
