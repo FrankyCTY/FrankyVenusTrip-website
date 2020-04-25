@@ -1,7 +1,5 @@
 $(document).ready(function () {
   // START ANIMATION
-  const cardside = document.querySelector(".cardside");
-  const card = $(".card");
 
   const cardside1 = document.querySelector(".cardside--1");
   const card1 = $(".card--1");
@@ -53,4 +51,62 @@ $(document).ready(function () {
       { bottom: 0, autoAlpha: 1, ease: Power2.easeInOut },
       "-=1.5"
     );
+
+  // Cards - touch to open
+  const cardside_front = document.querySelector(".cardside--front");
+  const cardside_back = document.querySelector(".cardside--back");
+
+  const card = document.querySelector(".card");
+
+  const tl2 = new TimelineMax();
+
+  const card_fliped = false;
+
+  card1.addEventListener("touchstart", function () {
+    if (card_fliped === false) {
+      tl2.fromTo(
+        cardside1,
+        0.5,
+        { rotationY: 0 },
+        { rotationY: "180deg", ease: Power2.easeInOut }
+      );
+    }
+    //     .fromTo(
+    //       cardside_back,
+    //       0.5,
+    //       {
+    //         rotationY: "180deg",
+    //       },
+    //       {
+    //         rotationY: 0,
+    //         ease: Power2.ease,
+    //       },
+    //       "-=.5"
+    //     );
+
+    //   card_fliped = true;
+    // } else {
+    //   tl2
+    //     .fromTo(
+    //       cardside_front,
+    //       0.5,
+    //       { rotationY: "180deg" },
+    //       { rotationY: "0deg", ease: Power2.easeInOut }
+    //     )
+    //     .fromTo(
+    //       cardside_back,
+    //       0.5,
+    //       {
+    //         rotationY: "0deg",
+    //       },
+    //       {
+    //         rotationY: "180deg",
+    //         ease: Power2.ease,
+    //       },
+    //       "-=.5"
+    //     );
+
+    //   card_fliped = false;
+    // }
+  });
 });
