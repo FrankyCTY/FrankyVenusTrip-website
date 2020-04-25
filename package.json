@@ -4,7 +4,7 @@
   "description": "",
   "main": "myJs.js",
   "scripts": {
-    "watch:scss": "node-sass ./scss/mix.scss ./scss/mix.css -w"
+    "watch:scss": "node-sass ./scss/mix.scss ./css/mix.css -w"
   },
   "author": "Franky Venusd",
   "license": "ISC",
