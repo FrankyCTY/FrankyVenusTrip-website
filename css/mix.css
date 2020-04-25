@@ -313,10 +313,10 @@ html[data-theme="dark"] .theme-toggle .iconthemelightdark {
     transform: rotateY(0deg); }
 
 .flipped {
-  -webkit-transition: -webkit-transform 0.8s ease;
-  transition: -webkit-transform 0.8s ease;
-  transition: transform 0.8s ease;
-  transition: transform 0.8s ease, -webkit-transform 0.8s ease; }
+  -webkit-transition: -webkit-transform 1.2s ease;
+  transition: -webkit-transform 1.2s ease;
+  transition: transform 1.2s ease;
+  transition: transform 1.2s ease, -webkit-transform 1.2s ease; }
   .flipped .cardside--front {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg); }
@@ -327,13 +327,13 @@ html[data-theme="dark"] .theme-toggle .iconthemelightdark {
 .cardside {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  overflow: hidden;
   box-shadow: 2px 5px 5px 5px rgba(0, 0, 0, 0.3);
-  -webkit-transition: -webkit-transform 0.8s ease;
-  transition: -webkit-transform 0.8s ease;
-  transition: transform 0.8s ease;
-  transition: transform 0.8s ease, -webkit-transform 0.8s ease;
-  border-radius: 2px; }
+  -webkit-transition: -webkit-transform 1.2s ease;
+  transition: -webkit-transform 1.2s ease;
+  transition: transform 1.2s ease;
+  transition: transform 1.2s ease, -webkit-transform 1.2s ease;
+  border-radius: 2px;
+  transform-style: preserve-3d; }
 
 .cardside--front {
   height: 100%;
@@ -366,7 +366,8 @@ html[data-theme="dark"] .theme-toggle .iconthemelightdark {
   position: absolute;
   top: 40%;
   right: 5%;
-  text-align: right; }
+  text-align: right;
+  transform: translateZ(5rem); }
 
 .card-title__span {
   -webkit-box-decoration-break: clone;
@@ -388,8 +389,8 @@ html[data-theme="dark"] .theme-toggle .iconthemelightdark {
 
 .cardside--back {
   height: 100%;
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -452,6 +453,53 @@ html[data-theme="dark"] .theme-toggle .iconthemelightdark {
     grid-column: 4; }
   .card--3 {
     grid-column: 6; } }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.body--test {
+  height: 100vh;
+  background: #000; }
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh; }
+
+.box {
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 200px);
+  width: 400px;
+  height: 400px;
+  transform-style: preserve-3d; }
+
+.div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg);
+  background: red; }
+
+.span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #ccc; }
+
+.div .span:nth-child(1) {
+  transform: rotateX(0deg) translate3d(0, 0, 200px); }
 
 .footer {
   grid-template-areas: ". info info ." ". logo logo .";
@@ -816,6 +864,9 @@ html[data-theme="dark"] .logo-link--ourstory {
 body {
   margin: 0;
   padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none; }
 
 .body--index {
@@ -837,6 +888,7 @@ html[data-theme="dark"] .body--index {
     color: initial; }
 
 html[data-theme="dark"] .logo-link--index {
+  -webkit-filter: invert(0);
   filter: invert(0); }
 
 /* nav */
@@ -847,7 +899,10 @@ html[data-theme="dark"] .logo-link--index {
   .nav {
     display: initial; }
   .nav-list {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     flex-direction: row; }
   .nav-item {
     margin: 0 1em; }
@@ -866,8 +921,11 @@ html[data-theme="dark"] .logo-link--index {
 .section-view-box {
   margin-bottom: var(--tiny-gap);
   grid-column: 1 / -1;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   align-items: center;
   padding: 6em 0 4em;
   background-size: cover;
@@ -960,6 +1018,7 @@ html[data-theme="dark"] .logo-link--index {
   right: 10%;
   bottom: 0;
   min-height: 30%;
+  -webkit-transform: translate(0, 50%);
   transform: translate(0, 50%); }
 
 @media (max-width: 800px) and (min-width: 500px) {
@@ -983,6 +1042,7 @@ html[data-theme="dark"] .logo-link--index {
   right: 5%;
   bottom: 0;
   min-height: 30%;
+  -webkit-transform: translate(0, 50%);
   transform: translate(0, 50%); }
 
 @media (max-width: 800px) and (min-width: 500px) {
@@ -999,6 +1059,7 @@ html[data-theme="dark"] .logo-link--index {
     right: 20%;
     top: 0;
     bottom: initial;
+    -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%); } }
 
 .section-text-auckland {
@@ -1015,6 +1076,8 @@ html[data-theme="dark"] .logo-link--index {
 
 .taranga-content-wrapper {
   grid-column: 2 / -2;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
   line-height: 1.8;
   font-family: "The Girl Next Door", cursive;
@@ -1058,12 +1121,15 @@ html[data-theme="dark"] .logo-link--index {
     margin-left: 2em; } }
 
 .taranga-content {
+  -webkit-box-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
   align-items: center; }
   .taranga-content img {
     --size: 50vw;
     width: var(--size);
     height: var(--size);
+    -o-object-fit: cover;
     object-fit: cover; }
     @media (min-width: 860px) {
       .taranga-content img {
@@ -1074,6 +1140,7 @@ html[data-theme="dark"] .logo-link--index {
     margin-bottom: 2em; }
 
 .taranga-content--2 img {
+  -webkit-box-ordinal-group: 0;
   order: -1; }
   @media (min-width: 690px) {
     .taranga-content--2 img {
@@ -1124,8 +1191,6 @@ html[data-theme="dark"] .logo-link--index {
   @media (min-width: 800px) {
     .rotorua-subtitle {
       -webkit-transform: rotate(-20deg);
-      -moz-transform: rotate(-20deg);
-      -ms-transform: rotate(-20deg);
       transform: rotate(-20deg); } }
 
 .rotorua-subtitle--1 {
@@ -1144,6 +1209,7 @@ html[data-theme="dark"] .logo-link--index {
   grid-column: 2 / -2;
   display: grid;
   grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr);
+  -webkit-box-align: center;
   align-items: center;
   justify-items: center;
   grid-template-areas: "subtitle subtitle" "gg1 text1" "text2 gg2" "gg3 gg4" "gg5 text3" "subtitle2 subtitle2" "wai1 text4" "text5 wai2" "wai3 wai4" "wai5 text6";
@@ -1163,7 +1229,9 @@ html[data-theme="dark"] .logo-link--index {
 .wai-img--2 {
   height: 258.133px;
   width: 387.2px;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center; }
 
 .gg-img--1 {
