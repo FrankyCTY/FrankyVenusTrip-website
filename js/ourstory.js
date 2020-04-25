@@ -56,11 +56,19 @@ $(document).ready(function () {
   const cardside_front = document.querySelector(".cardside--front");
   const cardside_back = document.querySelector(".cardside--back");
 
-  const card = document.querySelector(".card");
+  const card1 = document.querySelector(".card--1");
+  const card2 = document.querySelector(".card--2");
+  const card3 = document.querySelector(".card--3");
 
-  const tl2 = new TimelineMax();
+  card.addEventListener("click", function () {
+    card1.classList.toggle("flipped");
+  });
 
-  card.addEventListener("touchstart", function () {
-    card.classList.toggle("flipped");
+  card2.addEventListener("click", function () {
+    card2.classList.toggle("flipped");
+  });
+
+  card3.addEventListener("click", function () {
+    card3.classList.toggle("flipped");
   });
 });
