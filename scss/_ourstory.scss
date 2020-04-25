@@ -44,7 +44,7 @@ html[data-theme="dark"] {
 
   align-content: center;
 
-  grid-template-columns: minmax(3em, 1fr) minmax(0px, 400px) minmax(3em, 1fr);
+  grid-template-columns: minmax(5em, 1fr) minmax(0px, 350px) minmax(5em, 1fr);
 
   gap: 5em 0;
 
@@ -113,25 +113,21 @@ html[data-theme="dark"] {
 .card {
   --clr-card-content: #e8eef2;
   --clr-card-txt: var(--clr-blue-light);
-  height: 35rem;
+  height: 30rem;
   position: relative;
 
   perspective: 150rem;
 
-  font-size: 1.6em;
-
-  @media (min-width: 600px) {
-    font-size: 1.3em;
-  }
+  font-size: 1rem;
 
   @media (min-width: 800px) {
     height: 30rem;
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 
   @media (min-width: 850px) {
     height: 32rem;
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   &:hover,
@@ -268,19 +264,9 @@ html[data-theme="dark"] {
   a {
     display: inline-block;
     color: var(--clr-gray);
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 0.8em 1.6em;
     letter-spacing: 1px;
-
-    @media (min-width: 600px) {
-      font-size: 1.2em;
-      padding: 0.6em 1.3em;
-    }
-
-    @media (min-width: 800px) {
-      font-size: 1.5em;
-      padding: 0.8em 1.6em;
-    }
   }
 }
 
