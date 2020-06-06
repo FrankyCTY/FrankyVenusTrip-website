@@ -14,6 +14,7 @@ function lsColor() {
   const theme_checkbox = document.querySelectorAll("#theme-toggle");
   theme_checkbox.forEach((theme_checkbox) => {
     theme_checkbox.addEventListener("change", function () {
+      console.log("checkBox clicked!");
       if (this.checked) {
         trans();
         document.documentElement.setAttribute("data-theme", "dark");
