@@ -1,4 +1,4 @@
-$(document).ready(function () {
+function animateIndex() {
   const hero = $(".hero");
   const slider = $(".slider");
 
@@ -7,7 +7,7 @@ $(document).ready(function () {
   const logo = $(".logo-link");
   const nav = $(".nav");
 
-  const tl = new TimelineMax();
+  const tl = new TimelineMax({ delay: 1 });
 
   // =================== Layout animation ==================
 
@@ -25,7 +25,7 @@ $(document).ready(function () {
 
   // ================== Element fade In =========================
 
-  const tl2 = new TimelineMax();
+  const tl2 = new TimelineMax({ delay: 1 });
 
   tl2
     .fromTo(
@@ -55,4 +55,6 @@ $(document).ready(function () {
       },
       "-=1.5"
     );
-});
+}
+
+animateIndex();
